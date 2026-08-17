@@ -1,8 +1,71 @@
 /* =============================================
    MARCOS RODRÍGUEZ — Personal Portfolio
-   script.js — v3
+   script.js — v3 with i18n (EN, ES, FI)
    ============================================= */
 'use strict';
+
+// Current active language state
+let currentLanguage = 'en';
+
+// ===== INTERNATIONALIZATION (i18n) =====
+function setLanguage(lang) {
+  if (!TRANSLATIONS[lang]) return;
+  currentLanguage = lang;
+  localStorage.setItem('portfolio_lang', lang);
+  document.documentElement.lang = lang;
+
+  const dict = TRANSLATIONS[lang];
+
+  // Update page title and description
+  if (dict['meta.title']) document.title = dict['meta.title'];
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc && dict['meta.description']) metaDesc.setAttribute('content', dict['meta.description']);
+
+  // Update elements with text content
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[key]) {
+      el.textContent = dict[key];
+    }
+  });
+
+  // Update elements with HTML content
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.getAttribute('data-i18n-html');
+    if (dict[key]) {
+      el.innerHTML = dict[key];
+    }
+  });
+
+  // Update language buttons active state
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+  });
+}
+
+// Initialize language selector buttons
+(function initI18n() {
+  const langBtns = document.querySelectorAll('.lang-btn');
+  langBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.getAttribute('data-lang');
+      setLanguage(lang);
+    });
+  });
+
+  // Load saved language or detect browser preference
+  const savedLang = localStorage.getItem('portfolio_lang');
+  if (savedLang && TRANSLATIONS[savedLang]) {
+    setLanguage(savedLang);
+  } else {
+    const browserLang = (navigator.language || navigator.userLanguage || '').slice(0, 2).toLowerCase();
+    if (TRANSLATIONS[browserLang]) {
+      setLanguage(browserLang);
+    } else {
+      setLanguage('en');
+    }
+  }
+})();
 
 // ===== NAVBAR =====
 (function initNavbar() {
@@ -57,12 +120,6 @@
   }, { passive: true });
 })();
 
-// ===== TYPEWRITER =====
-(function initTypewriter() {
-  // Not used in v3 hero — hero-heading is static HTML
-  // Keeping for potential reuse
-})();
-
 // ===== PARTICLES =====
 (function initParticles() {
   const container = document.getElementById('particles');
@@ -97,7 +154,6 @@
     tab.addEventListener('click', () => {
       tabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
-      // Future: filter cards by tab data attribute
     });
   });
 })();
@@ -136,27 +192,35 @@
 
 // ===== CONTACT FORM =====
 (function initContactForm() {
-  const form     = document.getElementById('contact-form');
-  const feedback = document.getElementById('form-feedback');
+  const form      = document.getElementById('contact-form');
+  const feedback  = document.getElementById('form-feedback');
   const submitBtn = document.getElementById('contact-submit');
   if (!form || !feedback || !submitBtn) return;
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    const dict = TRANSLATIONS[currentLanguage] || TRANSLATIONS.en;
 
     const name    = document.getElementById('contact-name').value.trim();
     const email   = document.getElementById('contact-email-input').value.trim();
     const message = document.getElementById('contact-message').value.trim();
 
-    if (!name) { showFeedback('Please enter your name.', 'error'); return; }
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      showFeedback('Please enter a valid email address.', 'error'); return;
+    if (!name) { 
+      showFeedback(dict['form.err_name'] || 'Please enter your name.', 'error'); 
+      return; 
     }
-    if (!message) { showFeedback('Please write a message.', 'error'); return; }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showFeedback(dict['form.err_email'] || 'Please enter a valid email address.', 'error'); 
+      return; 
+    }
+    if (!message) { 
+      showFeedback(dict['form.err_msg'] || 'Please write a message.', 'error'); 
+      return; 
+    }
 
     submitBtn.disabled = true;
     const btnText = submitBtn.querySelector('.btn-text');
-    if (btnText) btnText.textContent = 'Sending…';
+    if (btnText) btnText.textContent = dict['form.sending'] || 'Sending…';
 
     await new Promise(r => setTimeout(r, 500));
 
@@ -164,10 +228,10 @@
     const body    = `Hi Marcos,\n\nMy name is ${name}.\n\n${message}\n\nBest,\n${name}\n${email}`;
     window.location.href = `mailto:rodriguezmarcos.fi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    showFeedback('✅ Email client opened. Thank you for reaching out!', 'success');
+    showFeedback(dict['form.success'] || '✅ Email client opened. Thank you for reaching out!', 'success');
     form.reset();
     submitBtn.disabled = false;
-    if (btnText) btnText.textContent = 'Send Message';
+    if (btnText) btnText.textContent = dict['form.btn_send'] || 'Send Message';
   });
 
   function showFeedback(msg, type) {
@@ -201,7 +265,6 @@
 (function initSkillCircles() {
   const circles = document.querySelectorAll('.skill-circle-ring');
   circles.forEach((ring, i) => {
-    // Each circle gets a different starting offset for the conic gradient
     const offset = (i * 60) % 360;
     ring.style.background = `conic-gradient(
       var(--orange) ${offset}deg ${offset + 220}deg,
