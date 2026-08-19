@@ -6,7 +6,7 @@
 const TRANSLATIONS = {
   en: {
     // Page Meta
-    "meta.title": "Creative Developer",
+    "meta.title": "M4rKitS.dev | Creative Developer",
     "meta.description": "Marcos Rodríguez Hernández — Aspiring Full Stack Developer (ConquerBlocks Master), IT Systems Technician & 8+ Years Operations Professional based in Vantaa, Finland.",
 
     // Navbar
@@ -167,7 +167,7 @@ const TRANSLATIONS = {
 
   es: {
     // Page Meta
-    "meta.title": "Creative Developer",
+    "meta.title": "M4rKitS.dev | Creative Developer",
     "meta.description": "Marcos Rodríguez Hernández — Estudiante del Máster Full Stack (ConquerBlocks), Técnico en Sistemas Microinformáticos y +8 años en Operaciones. Vantaa, Finlandia.",
 
     // Navbar
@@ -328,7 +328,7 @@ const TRANSLATIONS = {
 
   fi: {
     // Page Meta
-    "meta.title": "Creative Developer",
+    "meta.title": "M4rKitS.dev | Creative Developer",
     "meta.description": "Marcos Rodríguez Hernández — Full Stack -kehittäjäopiskelija (ConquerBlocks Master), IT-järjestelmäteknikko & logistiikan ammattilainen. Vantaa, Suomi.",
 
     // Navbar
