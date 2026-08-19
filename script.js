@@ -1,274 +1,468 @@
 /* =============================================
-   MARCOS RODRÍGUEZ — Personal Portfolio
-   script.js — v3 with i18n (EN, ES, FI)
+   MARCOS RODRÍGUEZ — Personal Tech Portfolio
+   script.js — Interactive Engine & 3D Particle Mesh
    ============================================= */
-'use strict';
 
-// Current active language state
-let currentLanguage = 'en';
+document.addEventListener('DOMContentLoaded', () => {
+  'use strict';
 
-// ===== INTERNATIONALIZATION (i18n) =====
-function setLanguage(lang) {
-  if (!TRANSLATIONS[lang]) return;
-  currentLanguage = lang;
-  localStorage.setItem('portfolio_lang', lang);
-  document.documentElement.lang = lang;
+  // --- 1. LANGUAGE / I18N ENGINE ---
+  let currentLang = localStorage.getItem('site_lang') || 'es';
 
-  const dict = TRANSLATIONS[lang];
+  function applyLanguage(lang) {
+    if (!TRANSLATIONS[lang]) lang = 'es';
+    currentLang = lang;
+    localStorage.setItem('site_lang', lang);
+    document.documentElement.lang = lang;
 
-  // Update page title and description
-  if (dict['meta.title']) document.title = dict['meta.title'];
-  const metaDesc = document.querySelector('meta[name="description"]');
-  if (metaDesc && dict['meta.description']) metaDesc.setAttribute('content', dict['meta.description']);
+    // Update Text Elements
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (TRANSLATIONS[lang][key]) {
+        el.textContent = TRANSLATIONS[lang][key];
+      }
+    });
 
-  // Update elements with text content
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (dict[key]) {
-      el.textContent = dict[key];
+    // Update Placeholder Elements
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (TRANSLATIONS[lang][key]) {
+        el.setAttribute('placeholder', TRANSLATIONS[lang][key]);
+      }
+    });
+
+    // Update HTML-enabled Elements
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (TRANSLATIONS[lang][key]) {
+        el.innerHTML = TRANSLATIONS[lang][key];
+      }
+    });
+
+    // Update Page Title and Meta Description
+    if (TRANSLATIONS[lang]['meta.title']) {
+      document.title = TRANSLATIONS[lang]['meta.title'];
     }
-  });
-
-  // Update elements with HTML content
-  document.querySelectorAll('[data-i18n-html]').forEach(el => {
-    const key = el.getAttribute('data-i18n-html');
-    if (dict[key]) {
-      el.innerHTML = dict[key];
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && TRANSLATIONS[lang]['meta.description']) {
+      metaDesc.setAttribute('content', TRANSLATIONS[lang]['meta.description']);
     }
-  });
 
-  // Update language buttons active state
+    // Update Active Language Switcher Buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+  }
+
+  // Language switcher event listeners
   document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
-  });
-}
-
-// Initialize language selector buttons
-(function initI18n() {
-  const langBtns = document.querySelectorAll('.lang-btn');
-  langBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      const lang = btn.getAttribute('data-lang');
-      setLanguage(lang);
-    });
-  });
-
-  // Load saved language or detect browser preference
-  const savedLang = localStorage.getItem('portfolio_lang');
-  if (savedLang && TRANSLATIONS[savedLang]) {
-    setLanguage(savedLang);
-  } else {
-    const browserLang = (navigator.language || navigator.userLanguage || '').slice(0, 2).toLowerCase();
-    if (TRANSLATIONS[browserLang]) {
-      setLanguage(browserLang);
-    } else {
-      setLanguage('en');
-    }
-  }
-})();
-
-// ===== NAVBAR =====
-(function initNavbar() {
-  const navbar  = document.getElementById('navbar');
-  const toggle  = document.getElementById('nav-toggle');
-  const navMenu = document.getElementById('nav-links');
-  if (!navbar || !toggle || !navMenu) return;
-
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 20);
-  }, { passive: true });
-
-  toggle.addEventListener('click', () => {
-    const open = navMenu.classList.toggle('open');
-    toggle.classList.toggle('open', open);
-    toggle.setAttribute('aria-expanded', open);
-  });
-
-  navMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('open');
-      toggle.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!navbar.contains(e.target) && navMenu.classList.contains('open')) {
-      navMenu.classList.remove('open');
-      toggle.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-    }
-  });
-})();
-
-// ===== ACTIVE NAV ON SCROLL =====
-(function initActiveNav() {
-  const sections   = document.querySelectorAll('section[id]');
-  const navLinks   = document.querySelectorAll('.nav-link');
-  if (!sections.length || !navLinks.length) return;
-
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-      if (window.scrollY >= section.offsetTop - 90) {
-        current = section.getAttribute('id');
+      const targetLang = btn.getAttribute('data-lang');
+      if (targetLang && targetLang !== currentLang) {
+        applyLanguage(targetLang);
       }
     });
-    navLinks.forEach(a => {
-      a.classList.toggle('active', a.getAttribute('href') === `#${current}`);
-    });
-  }, { passive: true });
-})();
-
-// ===== PARTICLES =====
-(function initParticles() {
-  const container = document.getElementById('particles');
-  if (!container) return;
-  const COUNT  = 24;
-  const colors = ['rgba(255,98,0,', 'rgba(255,122,32,', 'rgba(255,61,0,'];
-
-  for (let i = 0; i < COUNT; i++) {
-    const p    = document.createElement('div');
-    p.className = 'particle';
-    const size  = Math.random() * 4 + 2;
-    const color = colors[Math.floor(Math.random() * colors.length)];
-    const alpha = Math.random() * 0.5 + 0.1;
-    p.style.cssText = `
-      width:${size}px;height:${size}px;
-      left:${Math.random() * 100}%;
-      background:${color}${alpha});
-      box-shadow:0 0 ${size * 3}px ${color}0.3);
-      animation-duration:${Math.random() * 14 + 10}s;
-      animation-delay:${Math.random() * 12}s;
-    `;
-    container.appendChild(p);
-  }
-})();
-
-// ===== SERVICE TABS =====
-(function initServiceTabs() {
-  const tabs  = document.querySelectorAll('.service-tab');
-  if (!tabs.length) return;
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-    });
-  });
-})();
-
-// ===== SCROLL REVEAL =====
-(function initReveal() {
-  const selectors = [
-    '.project-card',
-    '.about-stat',
-    '.skill-circle',
-    '.timeline-item',
-    '.cert-badge',
-    '.contact-link-card',
-    '.contact-form',
-    '.about-langs .lang-item',
-  ];
-
-  selectors.forEach(sel => {
-    document.querySelectorAll(sel).forEach(el => el.classList.add('reveal'));
   });
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+  // Apply initial language
+  applyLanguage(currentLang);
+
+
+  // --- 2. 3D TOPOGRAPHIC PARTICLE WAVE CANVAS ENGINE ---
+  const canvas = document.getElementById('particle-canvas');
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let animationFrameId;
+    let width = 0;
+    let height = 0;
+
+    // Mouse Tracking with momentum
+    let mouse = { x: -1000, y: -1000, targetX: -1000, targetY: -1000 };
+    let isHovering = false;
+    let currentScroll = window.pageYOffset || 0;
+    let targetScroll = currentScroll;
+
+    function resizeCanvas() {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+      ctx.scale(dpr, dpr);
+    }
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas, { passive: true });
+
+    window.addEventListener('scroll', () => {
+      targetScroll = window.pageYOffset || document.documentElement.scrollTop;
+    }, { passive: true });
+
+    window.addEventListener('mousemove', (e) => {
+      mouse.targetX = e.clientX;
+      mouse.targetY = e.clientY;
+      isHovering = true;
+    }, { passive: true });
+
+    window.addEventListener('mouseleave', () => {
+      isHovering = false;
+    });
+
+    // Topographic Grid Parameters
+    const rows = 50;
+    const cols = 75;
+    let time = 0;
+
+    function renderParticleWave() {
+      time += 0.011;
+
+      // Smooth scroll interpolation
+      currentScroll += (targetScroll - currentScroll) * 0.08;
+      const scrollFactor = currentScroll * 0.0018;
+
+      // Smooth mouse interpolation
+      if (isHovering) {
+        mouse.x += (mouse.targetX - mouse.x) * 0.08;
+        mouse.y += (mouse.targetY - mouse.y) * 0.08;
+      } else {
+        mouse.x += (-1000 - mouse.x) * 0.05;
+        mouse.y += (-1000 - mouse.y) * 0.05;
+      }
+
+      ctx.clearRect(0, 0, width, height);
+
+      // Centered 3D Topographic Mesh spanning across the screen & text
+      const originX = width * 0.5;
+      const originY = height * 0.48;
+      const spacingX = (width * 1.1) / cols;
+      const spacingY = (height * 0.85) / rows;
+
+      for (let r = 0; r < rows; r++) {
+        const v = (r - rows * 0.5) / rows; // -0.5 to 0.5 normalized
+        const rowDepth = r / rows;
+
+        for (let c = 0; c < cols; c++) {
+          const u = (c - cols * 0.5) / cols; // -0.5 to 0.5 normalized
+
+          // Perspective and base coordinates
+          const perspective = 1 + rowDepth * 0.4;
+          const baseX = originX + (u * width * 1.15) * perspective;
+          const baseY = originY + (v * height * 0.85) * perspective;
+
+          // Harmonic Wave elevation calculation with scroll factoring
+          const wave1 = Math.sin(u * 6 + time * 1.4 + v * 4 + scrollFactor * 2) * 32;
+          const wave2 = Math.cos(v * 7 - time * 1.1 + u * 3 - scrollFactor * 1.5) * 24;
+          const wave3 = Math.sin((u * 4 + v * 4) + time * 1.8 + scrollFactor) * 18;
+          let elevation = wave1 + wave2 + wave3;
+
+          // Interactive Mouse reaction
+          const dx = baseX - mouse.x;
+          const dy = baseY - mouse.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 260) {
+            const force = (1 - dist / 260) * 55;
+            elevation -= force;
+          }
+
+          const posX = baseX;
+          const posY = baseY + elevation;
+
+          // Radial falloff from screen edges so particles smoothly fade out
+          const distFromCenter = Math.sqrt(u * u + v * v);
+          const edgeAlpha = Math.max(0, 1 - distFromCenter * 1.6);
+
+          // Alpha & Size based on wave crests and depth
+          const waveAlpha = Math.max(0.1, Math.min(1, (elevation + 45) / 75));
+          const finalAlpha = edgeAlpha * waveAlpha * (0.35 + rowDepth * 0.65);
+
+          if (finalAlpha <= 0.02) continue;
+
+          const dotSize = Math.max(0.7, 1.2 + (elevation / 30) + (rowDepth * 0.7));
+
+          // Draw Particle
+          ctx.beginPath();
+          ctx.arc(posX, posY, dotSize, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(255, 255, 255, ${finalAlpha * 0.82})`;
+          ctx.fill();
+
+          // Connect subtle wireframe lines on alternating rows
+          if (c > 0 && r % 2 === 0 && finalAlpha > 0.18) {
+            ctx.beginPath();
+            ctx.moveTo(posX, posY);
+            ctx.lineTo(posX - spacingX * perspective, posY);
+            ctx.strokeStyle = `rgba(255, 255, 255, ${finalAlpha * 0.07})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+      }
+
+      animationFrameId = requestAnimationFrame(renderParticleWave);
+    }
+
+    renderParticleWave();
+
+    // Pause animation when page is hidden to save CPU/battery
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        cancelAnimationFrame(animationFrameId);
+      } else {
+        renderParticleWave();
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
-
-  document.querySelectorAll('.reveal').forEach((el, i) => {
-    el.style.transitionDelay = `${(i % 5) * 0.07}s`;
-    observer.observe(el);
-  });
-})();
-
-// ===== CONTACT FORM =====
-(function initContactForm() {
-  const form      = document.getElementById('contact-form');
-  const feedback  = document.getElementById('form-feedback');
-  const submitBtn = document.getElementById('contact-submit');
-  if (!form || !feedback || !submitBtn) return;
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const dict = TRANSLATIONS[currentLanguage] || TRANSLATIONS.en;
-
-    const name    = document.getElementById('contact-name').value.trim();
-    const email   = document.getElementById('contact-email-input').value.trim();
-    const message = document.getElementById('contact-message').value.trim();
-
-    if (!name) { 
-      showFeedback(dict['form.err_name'] || 'Please enter your name.', 'error'); 
-      return; 
-    }
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      showFeedback(dict['form.err_email'] || 'Please enter a valid email address.', 'error'); 
-      return; 
-    }
-    if (!message) { 
-      showFeedback(dict['form.err_msg'] || 'Please write a message.', 'error'); 
-      return; 
-    }
-
-    submitBtn.disabled = true;
-    const btnText = submitBtn.querySelector('.btn-text');
-    if (btnText) btnText.textContent = dict['form.sending'] || 'Sending…';
-
-    await new Promise(r => setTimeout(r, 500));
-
-    const subject = document.getElementById('contact-subject').value.trim() || 'Portfolio Contact';
-    const body    = `Hi Marcos,\n\nMy name is ${name}.\n\n${message}\n\nBest,\n${name}\n${email}`;
-    window.location.href = `mailto:rodriguezmarcos.fi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-    showFeedback(dict['form.success'] || '✅ Email client opened. Thank you for reaching out!', 'success');
-    form.reset();
-    submitBtn.disabled = false;
-    if (btnText) btnText.textContent = dict['form.btn_send'] || 'Send Message';
-  });
-
-  function showFeedback(msg, type) {
-    feedback.textContent = msg;
-    feedback.className   = 'form-feedback ' + type;
   }
-})();
 
-// ===== FOOTER YEAR =====
-(function setYear() {
-  const el = document.getElementById('current-year');
-  if (el) el.textContent = new Date().getFullYear();
-})();
 
-// ===== SMOOTH SCROLL =====
-(function initSmoothScroll() {
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const id = this.getAttribute('href');
-      if (id === '#') return;
-      const target = document.querySelector(id);
-      if (!target) return;
+  // --- 3. STACK / PROJECTS FILTERING ---
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const stackCards = document.querySelectorAll('.stack-card');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.getAttribute('data-filter');
+
+      stackCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        if (filter === 'all' || category === filter) {
+          card.style.display = 'flex';
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, 10);
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(8px)';
+          setTimeout(() => {
+            card.style.display = 'none';
+          }, 200);
+        }
+      });
+    });
+  });
+
+
+  // --- 4. TERMINAL CONTACT FORM ---
+  const contactForm = document.getElementById('contact-form');
+  const formFeedback = document.getElementById('form-feedback');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const navH = 76;
-      window.scrollTo({ top: target.offsetTop - navH, behavior: 'smooth' });
-    });
-  });
-})();
 
-// ===== SKILL CIRCLES — stagger rotate offset =====
-(function initSkillCircles() {
-  const circles = document.querySelectorAll('.skill-circle-ring');
-  circles.forEach((ring, i) => {
-    const offset = (i * 60) % 360;
-    ring.style.background = `conic-gradient(
-      var(--orange) ${offset}deg ${offset + 220}deg,
-      rgba(255,98,0,.08) ${offset + 220}deg ${offset + 360}deg
-    )`;
-  });
-})();
+      const nameInput = document.getElementById('contact-name');
+      const emailInput = document.getElementById('contact-email');
+      const subjectInput = document.getElementById('contact-subject');
+      const messageInput = document.getElementById('contact-message');
+
+      const name = nameInput.value.trim();
+      const email = emailInput.value.trim();
+      const subject = subjectInput.value.trim() || 'Portfolio Contact from ' + name;
+      const message = messageInput.value.trim();
+
+      const langData = TRANSLATIONS[currentLang] || TRANSLATIONS['es'];
+
+      // Validation
+      if (!name) {
+        showFeedback(langData['form.err_name'] || 'Please enter your name.', 'error');
+        nameInput.focus();
+        return;
+      }
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showFeedback(langData['form.err_email'] || 'Please enter a valid email address.', 'error');
+        emailInput.focus();
+        return;
+      }
+      if (!message) {
+        showFeedback(langData['form.err_msg'] || 'Please write a message.', 'error');
+        messageInput.focus();
+        return;
+      }
+
+      // Build Mailto URI
+      const bodyText = `Sender: ${name} (${email})\n\nMessage:\n${message}`;
+      const mailtoUrl = `mailto:rodriguezmarcos.fi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
+
+      showFeedback(langData['form.sending'] || 'Opening mail client…', 'success');
+
+      setTimeout(() => {
+        window.location.href = mailtoUrl;
+        showFeedback(langData['form.success'] || '✓ Client opened. Thank you!', 'success');
+      }, 500);
+    });
+  }
+
+  function showFeedback(text, type) {
+    if (!formFeedback) return;
+    formFeedback.textContent = text;
+    formFeedback.className = 'form-feedback ' + type;
+  }
+
+
+  // --- 5. COOKIE CONSENT BANNER ---
+  const cookieBanner = document.getElementById('cookie-banner');
+  const cookieAccept = document.getElementById('cookie-accept');
+  const cookieDecline = document.getElementById('cookie-decline');
+
+  const cookieConsent = localStorage.getItem('cookie_consent');
+
+  if (!cookieConsent && cookieBanner) {
+    setTimeout(() => {
+      cookieBanner.classList.add('visible');
+    }, 1400);
+  }
+
+  if (cookieAccept) {
+    cookieAccept.addEventListener('click', () => {
+      localStorage.setItem('cookie_consent', 'accepted');
+      if (cookieBanner) cookieBanner.classList.remove('visible');
+    });
+  }
+
+  if (cookieDecline) {
+    cookieDecline.addEventListener('click', () => {
+      localStorage.setItem('cookie_consent', 'declined');
+      if (cookieBanner) cookieBanner.classList.remove('visible');
+    });
+  }
+
+
+  // --- 6. NAVBAR SCROLL & ACTIVE SECTION HIGHLIGHT ---
+  const header = document.getElementById('header');
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Header background blur intensification on scroll
+    if (header) {
+      header.classList.toggle('scrolled', scrollY > 40);
+    }
+
+    // Highlight active menu item based on viewport position
+    sections.forEach(current => {
+      const sectionHeight = current.offsetHeight;
+      const sectionTop = current.offsetTop - 140;
+      const sectionId = current.getAttribute('id');
+
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + sectionId);
+        });
+      }
+    });
+  }, { passive: true });
+
+
+  // --- 7. MOBILE MENU TOGGLE ---
+  const navToggle = document.getElementById('nav-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = navMenu.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close menu when a navigation link is clicked
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', false);
+      });
+    });
+  }
+
+
+  // --- 8. DRAGGABLE WHATSAPP FLOATING BUTTON ---
+  const waContainer = document.getElementById('whatsapp-draggable');
+  const waBtn = document.getElementById('whatsapp-btn');
+
+  if (waContainer) {
+    let isDragging = false;
+    let startX, startY;
+    let initialLeft, initialTop;
+    let hasMoved = false;
+
+    waContainer.addEventListener('pointerdown', (e) => {
+      if (e.button !== 0 && e.pointerType === 'mouse') return;
+
+      isDragging = true;
+      hasMoved = false;
+      startX = e.clientX;
+      startY = e.clientY;
+
+      const rect = waContainer.getBoundingClientRect();
+      initialLeft = rect.left;
+      initialTop = rect.top;
+
+      waContainer.style.bottom = 'auto';
+      waContainer.style.right = 'auto';
+      waContainer.style.left = initialLeft + 'px';
+      waContainer.style.top = initialTop + 'px';
+      waContainer.classList.add('is-dragging');
+
+      try {
+        waContainer.setPointerCapture(e.pointerId);
+      } catch (err) {}
+    });
+
+    waContainer.addEventListener('pointermove', (e) => {
+      if (!isDragging) return;
+
+      const deltaX = e.clientX - startX;
+      const deltaY = e.clientY - startY;
+
+      if (Math.abs(deltaX) > 4 || Math.abs(deltaY) > 4) {
+        hasMoved = true;
+      }
+
+      let newLeft = initialLeft + deltaX;
+      let newTop = initialTop + deltaY;
+
+      const maxLeft = window.innerWidth - waContainer.offsetWidth - 12;
+      const maxTop = window.innerHeight - waContainer.offsetHeight - 12;
+
+      newLeft = Math.max(12, Math.min(newLeft, maxLeft));
+      newTop = Math.max(12, Math.min(newTop, maxTop));
+
+      waContainer.style.left = newLeft + 'px';
+      waContainer.style.top = newTop + 'px';
+    });
+
+    function endDrag(e) {
+      if (isDragging) {
+        isDragging = false;
+        waContainer.classList.remove('is-dragging');
+        try {
+          waContainer.releasePointerCapture(e.pointerId);
+        } catch (err) {}
+      }
+    }
+
+    waContainer.addEventListener('pointerup', endDrag);
+    waContainer.addEventListener('pointercancel', endDrag);
+
+    // If user dragged the button, cancel opening link
+    if (waBtn) {
+      waBtn.addEventListener('click', (e) => {
+        if (hasMoved) {
+          e.preventDefault();
+          e.stopPropagation();
+          hasMoved = false;
+        }
+      });
+    }
+  }
+
+
+  // --- 9. FOOTER DYNAMIC CURRENT YEAR ---
+  const yearSpan = document.getElementById('current-year');
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+});
+

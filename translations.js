@@ -1,59 +1,123 @@
 /* =============================================
-   MARCOS RODRÍGUEZ — Personal Portfolio
+   MARCOS RODRÍGUEZ — Personal Tech Portfolio
    translations.js — Multilingual Support (EN, ES, FI)
    ============================================= */
 
 const TRANSLATIONS = {
   en: {
     // Page Meta
-    "meta.title": "Marcos Rodríguez — Full Stack Developer",
-    "meta.description": "Marcos Rodríguez Hernández — Full Stack Web Development Student, IT Systems Technician & Logistics Professional based in Vantaa, Helsinki.",
+    "meta.title": "Marcos Rodríguez — Full Stack Developer in Training",
+    "meta.description": "Marcos Rodríguez Hernández — Aspiring Full Stack Developer (ConquerBlocks Master), IT Systems Technician & 8+ Years Operations Professional based in Vantaa, Finland.",
 
     // Navbar
-    "nav.home": "Home",
-    "nav.projects": "Projects",
-    "nav.about": "About Me",
-    "nav.contact": "Contact",
+    "nav.brand": "M4rKitS.dev",
+    "nav.home": "01//HOME",
+    "nav.projects": "02//PROJECTS",
+    "nav.experience": "03//EXPERIENCE",
+    "nav.about": "04//ABOUT",
+    "nav.contact": "05//CONTACT",
 
     // Hero
-    "hero.badge": "HELLO!",
-    "hero.heading": 'I\'m <span class="accent">Marcos</span> ,<br>Full Stack<br>Developer',
-    "hero.years_val": "8+ Years",
-    "hero.years_lbl": "Experience",
-    "hero.location": "Vantaa, Helsinki · Finland",
-    "hero.btn_projects": "View Projects <span>→</span>",
-    "hero.btn_contact": "Let's Talk",
-    "hero.quote": "Tech Enthusiast transitioning into software engineering — bringing 8+ years of operational excellence to the world of web development.",
+    "hero.badge": "STATUS: LEARNING & BUILDING",
+    "hero.line1": "CREATIVE",
+    "hero.line2": "DEVELOPER",
+    "hero.role": "Marcos Rodríguez / Full Stack Developer in Training (ConquerBlocks)",
+    "hero.tagline": "// SCALABLE & RESILIENT WEB SOLUTIONS.",
+    "hero.explore": "EXPLORE MY WORK ↓",
+    "hero.bio": "20+ years passion for tech & 8+ years background in logistics & IT systems, transitioning into software engineering with the ConquerBlocks Full Stack Master. Based in Vantaa, Finland.",
+    "hero.btn_contact": "INITIATE CONTACT →",
 
-    // Services / Projects
-    "projects.label": 'My <span class="accent">Services</span>',
-    "projects.title": 'What I <span class="accent">Offer</span>',
-    "projects.tab_webdev": "Web Development",
-    "projects.tab_fullstack": "Full Stack",
-    "projects.tab_ai": "AI & Automation",
-    "projects.tab_it": "IT Systems",
-    "projects.tab_ops": "Operations",
+    // Projects & Technologies
+    "projects.index": "02 // STACK & PROJECTS",
+    "projects.title": "TECHNOLOGIES & WORK",
+    "projects.desc": "Tools, platforms, and technologies I actively use and learn to build modern digital solutions.",
+    
+    "projects.tab_all": "All Stack",
+    "projects.tab_ai_tools": "AI & Design",
+    "projects.tab_code": "Core & Scripting",
+    "projects.tab_cloud": "Cloud & Data",
 
-    "projects.card1_title": "Web Development",
-    "projects.card1_desc": "Building modern, responsive websites and web applications using HTML, CSS, JavaScript, and React. Focused on clean code, performance, and user experience.",
-    "projects.card2_title": "Full Stack Solutions",
-    "projects.card2_desc": "End-to-end development covering frontend interfaces, backend APIs, and database integration. Currently mastering full stack through an intensive bootcamp program.",
-    "projects.card3_title": "AI & Automation",
-    "projects.card3_desc": "Applying AI tools and automation strategies to enhance workflows and productivity. Certified in Generative AI (AWS) and AI & Automation for Logistics.",
-    "projects.card4_title": "IT Support & Systems",
-    "projects.card4_desc": "Technical support and IT systems consulting, drawing from my academic training as an IT Systems Technician with expertise in networks, hardware, and troubleshooting.",
+    "projects.card_antigravity_title": "Google Antigravity",
+    "projects.card_antigravity_desc": "Agentic AI-driven pair programming, workflow automation, and high-efficiency full-stack software development.",
+    "projects.card_antigravity_tag": "AI Coding & Agents",
 
-    "projects.btn_all": "See All Projects →",
+    "projects.card_stitch_title": "Google Stitch",
+    "projects.card_stitch_desc": "Rapid UI/UX prototyping, design systems generation, and AI-powered interface architecture.",
+    "projects.card_stitch_tag": "UI / Design Systems",
+
+    "projects.card_python_title": "Python Programming",
+    "projects.card_python_desc": "Core programming fundamentals, scripting, automation of tasks, and data processing routines.",
+    "projects.card_python_tag": "Programming & Logic",
+
+    "projects.card_git_title": "Git & GitHub",
+    "projects.card_git_desc": "Version control workflows, repository management, collaborative branching, and CI/CD pipelines.",
+    "projects.card_git_tag": "Version Control",
+
+    "projects.card_cloudflare_title": "Cloudflare Ecosystem",
+    "projects.card_cloudflare_desc": "Deployment of static & dynamic web applications on Cloudflare Pages, DNS management, and edge performance.",
+    "projects.card_cloudflare_tag": "Cloud & Hosting",
+
+    "projects.card_supabase_title": "Supabase BaaS",
+    "projects.card_supabase_desc": "PostgreSQL database management, authentication flows, real-time data, and serverless backend integration.",
+    "projects.card_supabase_tag": "Database & Auth",
+
+    "projects.card_web_title": "HTML5 & Modern CSS3",
+    "projects.card_web_desc": "Semantic web architecture, responsive layouts, CSS grid/flexbox, animations, and accessible interfaces.",
+    "projects.card_web_tag": "Frontend Architecture",
+
+    "projects.github_cta": "Explore GitHub Repositories →",
+
+    // Experience
+    "exp.index": "03 // TRAJECTORY",
+    "exp.title": "WORK EXPERIENCE & EDUCATION",
+    "exp.desc": "A continuous progression combining technical training, operational leadership, and modern web development.",
+
+    "exp.badge_inprogress": "STATUS: IN_PROGRESS",
+
+    "exp.date1": "Sep 2024 — In Progress",
+    "exp.title1": "Master Full Stack Developer",
+    "exp.company1": "ConquerBlocks Academy",
+    "exp.desc1": "Comprehensive software engineering program focused on modern web fundamentals, development workflows, algorithms, and practical applications.",
+
+    "exp.date2": "May 2019 — Sep 2025",
+    "exp.title2": "Commercial Agent & Logistics Coordinator",
+    "exp.company2": "Grupo Síndel, S.A.",
+    "exp.desc2": "Coordinated logistics operations, managed inventory tracking systems, and streamlined client account communications with high reliability.",
+
+    "exp.date3": "Aug 2017 — May 2019",
+    "exp.title3": "Logistics & Distribution Specialist",
+    "exp.company3": "Grupo Síndel, S.A.",
+    "exp.desc3": "Executed regional route optimization, fleet scheduling, and time-critical delivery logistics.",
+
+    "exp.date4": "Sep 2014 — Jun 2016",
+    "exp.title4": "Higher Vocational Diploma — IT Systems & Networks",
+    "exp.company4": "Instituto Navarro Santafé",
+    "exp.desc4": "Technical academic training covering computer hardware, server administration, network topologies, and systems maintenance.",
+
+    "exp.certs_title": "CERTIFICATIONS & CREDENTIALS",
+    "certs.verified_tag": "[VERIFIED CREDENTIALS]",
+    "certs.verified_pill": "✓ VERIFIED",
+    "certs.aws": "AWS Educate — Generative AI",
+    "certs.aws_org": "Amazon Web Services · Verified Badge",
+    "certs.ai_log": "AI & Automation for Logistics",
+    "certs.ai_log_org": "Logistics Systems Academy",
+    "certs.python": "Python Core Certification",
+    "certs.python_org": "Programming Institute",
+    "certs.vibe": "AI & Automation Workflows",
+    "certs.vibe_org": "Modern AI Engineering",
+    "certs.sales": "Technical Sales & Negotiation",
+    "certs.sales_org": "Executive Skills Program",
 
     // About
-    "about.label": 'Who I <span class="accent">Am</span>',
-    "about.title": 'About <span class="accent">Me</span>',
-    "about.lead": "Tech Enthusiast and Full Stack Web Development Student with a solid background in IT Systems and Operations — currently transitioning into software engineering.",
-    "about.body": 'Based in Vantaa, I\'m a detail-oriented professional deep-diving into Full Stack Web Development at <strong>Conquer Blocks Academy</strong> while leveraging over 8 years of professional experience.',
-    "about.stat_exp": "Years Experience",
-    "about.stat_certs": "Certifications",
-    "about.stat_langs": "Languages",
+    "about.index": "04 // ABOUT ME",
+    "about.title": "BACKGROUND & MISSION",
+    "about.lead": "Technologist transitioning into software engineering — bringing 20+ years of passion for tech and 8+ years of operational discipline into web development.",
+    "about.body": "Living in Vantaa (Finland), I am currently dedicating my full focus to the Full Stack Master at ConquerBlocks. My background in IT systems and logistics gives me a unique problem-solving mindset: structured, efficient, and resilient.",
+    "about.stat_tech": "Years in Tech World",
+    "about.stat_exp": "Logistics & Operations",
+    "about.stat_focus": "Master Full Stack",
 
+    "about.langs_title": "LANGUAGES",
     "about.lang_es": "Spanish",
     "about.lang_en": "English",
     "about.lang_fi": "Finnish",
@@ -61,288 +125,365 @@ const TRANSLATIONS = {
     "about.lvl_prof": "Professional",
     "about.lvl_learning": "Learning",
 
-    "about.skills_label": 'Skills and tools that I <span class="accent">Master</span>',
-    "skills.frontend": "Frontend",
-    "skills.backend": "Backend",
-    "skills.ai": "AI & Automation",
-    "skills.it": "IT Systems",
-    "skills.tools": "Git & Tools",
-    "skills.ops": "Operations",
-
-    // Experience
-    "exp.title": 'My <span class="accent">Work Experience</span>',
-    "exp.date1": "Sep 2024 — Now",
-    "exp.title1": "Full Stack Development Bootcamp",
-    "exp.desc1": "Intensive full stack program covering modern web technologies, practical programming projects, and real-world development practices.",
-
-    "exp.date2": "May 2019 — Sep 2025",
-    "exp.title2": "Commercial Agent & Logistics Coordinator",
-    "exp.desc2": "Managed client accounts and coordinated regional distribution using digital inventory systems to optimize workflows and improve delivery accuracy.",
-
-    "exp.date3": "Aug 2017 — Sep 2025",
-    "exp.title3": "Delivery Driver & Logistics Operator",
-    "exp.desc3": "Executed daily delivery operations and regional logistics routes with a strong focus on timing efficiency, route optimization, and safety protocols.",
-
-    "exp.date4": "Sep 2014 — Jun 2016",
-    "exp.title4": "Higher Vocational Diploma — IT Systems",
-    "exp.desc4": "Academic training in computer infrastructure, hardware, networks, electrical installations, and troubleshooting.",
-
-    "exp.certs_label": 'My <span class="accent">Certifications</span>',
-    "certs.aws": "AWS Educate — Generative AI",
-    "certs.ai_log": "AI & Automation for Logistics",
-    "certs.python": "Python Certification",
-    "certs.vibe": "AI, Vibe Coding & Automation",
-    "certs.sales": "Expert Sales Course",
-
     // Contact
-    "contact.title": "Have an Awesome Project Idea?",
-    "contact.sub": "Let's Discuss",
-    "contact.email_lbl": "Email",
-    "contact.phone_lbl": "Phone",
-    "contact.linkedin_lbl": "LinkedIn",
-    "contact.github_lbl": "GitHub",
-
-    "form.label_name": "Full Name",
-    "form.label_email": "Email",
-    "form.label_subject": "Subject",
-    "form.label_message": "Your Message",
-    "form.btn_send": "Send Message",
-    "form.sending": "Sending…",
+    "contact.index": "05 // GET IN TOUCH",
+    "contact.title": "LET'S BUILD SOMETHING",
+    "contact.desc": "Interested in collaborating, discussing tech, or having a chat? Reach out through any channel.",
+    
+    "contact.email_lbl": "DIRECT EMAIL",
+    "contact.phone_lbl": "PHONE / WHATSAPP",
+    "contact.linkedin_lbl": "LINKEDIN PROFILE",
+    "contact.github_lbl": "GITHUB REPOSITORIES",
+    
+    "form.label_name": "NAME",
+    "form.placeholder_name": "Full Name",
+    "form.label_email": "EMAIL",
+    "form.placeholder_email": "your.email@domain.com",
+    "form.label_subject": "SUBJECT",
+    "form.placeholder_subject": "Project Inquiry / Collaboration",
+    "form.label_message": "MESSAGE",
+    "form.placeholder_msg": "Write your message here...",
+    "form.btn_send": "SEND MESSAGE",
+    "form.sending": "TRANSMITTING…",
     "form.err_name": "Please enter your name.",
-    "form.err_email": "Please enter a valid email address.",
+    "form.err_email": "Please enter a valid email.",
     "form.err_msg": "Please write a message.",
-    "form.success": "✅ Email client opened. Thank you for reaching out!",
+    "form.success": "✓ Mail client opened. Thank you for connecting!",
+
+    // WhatsApp Floating Button
+    "whatsapp.tooltip": "Chat on WhatsApp (Draggable)",
+
+    // Cookie Banner
+    "cookie.tag": "[PRIVACY & PREFERENCES]",
+    "cookie.title": "COOKIE PREFERENCES",
+    "cookie.text": "This portfolio uses minimal local storage to remember your language preference and improve your browsing experience.",
+    "cookie.accept": "ACCEPT & PROCEED",
+    "cookie.decline": "DECLINE",
 
     // Footer
-    "footer.tagline": "Building the web, one line at a time. 🚀",
-    "footer.copy_prefix": "Marcos Rodríguez Hernández · Vantaa, Helsinki, Finland"
+    "footer.tagline": "Building my future. // Vantaa, Finland.",
+    "footer.copy": "Marcos Rodríguez Hernández. All rights reserved."
   },
 
   es: {
     // Page Meta
-    "meta.title": "Marcos Rodríguez — Desarrollador Full Stack",
-    "meta.description": "Marcos Rodríguez Hernández — Estudiante de Desarrollo Web Full Stack, Técnico en Sistemas IT y Profesional de Logística en Vantaa, Helsinki.",
+    "meta.title": "Marcos Rodríguez — Estudiante de Desarrollo Full Stack",
+    "meta.description": "Marcos Rodríguez Hernández — Estudiante del Máster Full Stack (ConquerBlocks), Técnico en Sistemas Microinformáticos y +8 años en Operaciones. Vantaa, Finlandia.",
 
     // Navbar
-    "nav.home": "Inicio",
-    "nav.projects": "Proyectos",
-    "nav.about": "Sobre Mí",
-    "nav.contact": "Contacto",
+    "nav.brand": "M4rKitS.dev",
+    "nav.home": "01//INICIO",
+    "nav.projects": "02//PROYECTOS",
+    "nav.experience": "03//EXPERIENCIA",
+    "nav.about": "04//SOBRE MÍ",
+    "nav.contact": "05//CONTACTO",
 
     // Hero
-    "hero.badge": "¡HOLA!",
-    "hero.heading": 'Soy <span class="accent">Marcos</span> ,<br>Desarrollador<br>Full Stack',
-    "hero.years_val": "8+ Años",
-    "hero.years_lbl": "Experiencia",
-    "hero.location": "Vantaa, Helsinki · Finlandia",
-    "hero.btn_projects": "Ver Proyectos <span>→</span>",
-    "hero.btn_contact": "Hablemos",
-    "hero.quote": "Entusiasta de la tecnología en transición a la ingeniería de software — aportando más de 8 años de excelencia operativa al mundo del desarrollo web.",
+    "hero.badge": "ESTADO: APRENDIENDO Y CONSTRUYENDO",
+    "hero.line1": "CREATIVE",
+    "hero.line2": "DEVELOPER",
+    "hero.role": "Marcos Rodríguez / Full Stack Developer in Training (ConquerBlocks)",
+    "hero.tagline": "// SOLUCIONES WEB ESCALABLES Y RESILIENTES.",
+    "hero.explore": "EXPLORAR MI TRABAJO ↓",
+    "hero.bio": "+20 años de pasión tecnológica y +8 años de experiencia en logística y sistemas IT, en plena transición al desarrollo de software con el Máster Full Stack de ConquerBlocks. Residiendo en Vantaa, Finlandia.",
+    "hero.btn_contact": "INICIAR CONTACTO →",
 
-    // Services / Projects
-    "projects.label": 'Mis <span class="accent">Servicios</span>',
-    "projects.title": 'Lo que <span class="accent">Ofrezco</span>',
-    "projects.tab_webdev": "Desarrollo Web",
-    "projects.tab_fullstack": "Full Stack",
-    "projects.tab_ai": "IA y Automatización",
-    "projects.tab_it": "Sistemas IT",
-    "projects.tab_ops": "Operaciones",
+    // Projects & Technologies
+    "projects.index": "02 // STACK Y PROYECTOS",
+    "projects.title": "TECNOLOGÍAS Y TRABAJO",
+    "projects.desc": "Herramientas, plataformas y tecnologías que uso y aprendo activamente para crear soluciones digitales modernas.",
+    
+    "projects.tab_all": "Todo el Stack",
+    "projects.tab_ai_tools": "IA y Diseño",
+    "projects.tab_code": "Programación",
+    "projects.tab_cloud": "Cloud y Datos",
 
-    "projects.card1_title": "Desarrollo Web",
-    "projects.card1_desc": "Creación de sitios web y aplicaciones web modernas y responsivas con HTML, CSS, JavaScript y React. Enfocado en código limpio, rendimiento y experiencia de usuario.",
-    "projects.card2_title": "Soluciones Full Stack",
-    "projects.card2_desc": "Desarrollo integral que abarca interfaces frontend, APIs backend e integración de bases de datos. Dominando full stack a través de un bootcamp intensivo.",
-    "projects.card3_title": "IA y Automatización",
-    "projects.card3_desc": "Aplicación de herramientas de IA y estrategias de automatización para optimizar flujos de trabajo y productividad. Certificado en IA Generativa (AWS) e IA en Logística.",
-    "projects.card4_title": "Soporte y Sistemas IT",
-    "projects.card4_desc": "Soporte técnico y consultoría en sistemas informáticos, respaldado por formación académica como Técnico de Sistemas con experiencia en redes, hardware y resolución de problemas.",
+    "projects.card_antigravity_title": "Google Antigravity",
+    "projects.card_antigravity_desc": "Desarrollo asistido por agentes de IA, programación agéntica en parejas y automatización de flujos de código de alta eficiencia.",
+    "projects.card_antigravity_tag": "IA & Agentes",
 
-    "projects.btn_all": "Ver Todos los Proyectos →",
+    "projects.card_stitch_title": "Google Stitch",
+    "projects.card_stitch_desc": "Prototipado rápido de interfaces de usuario (UI/UX), generación de sistemas de diseño y arquitectura visual con IA.",
+    "projects.card_stitch_tag": "UI / Design Systems",
+
+    "projects.card_python_title": "Programación con Python",
+    "projects.card_python_desc": "Fundamentos sólidos de programación, scripts de automatización, lógica de control y procesamiento de datos.",
+    "projects.card_python_tag": "Lógica & Scripting",
+
+    "projects.card_git_title": "Git & GitHub",
+    "projects.card_git_desc": "Flujos de trabajo con control de versiones, ramas, gestión de repositorios y despliegues colaborativos.",
+    "projects.card_git_tag": "Control de Versiones",
+
+    "projects.card_cloudflare_title": "Ecosistema Cloudflare",
+    "projects.card_cloudflare_desc": "Despliegue y optimización en Cloudflare Pages, gestión de dominios, DNS y rendimiento en el Edge.",
+    "projects.card_cloudflare_tag": "Cloud & Hosting",
+
+    "projects.card_supabase_title": "Supabase BaaS",
+    "projects.card_supabase_desc": "Bases de datos relacionales PostgreSQL, autenticación de usuarios, datos en tiempo real y backend serverless.",
+    "projects.card_supabase_tag": "Base de Datos & Auth",
+
+    "projects.card_web_title": "HTML5 & CSS3 Moderno",
+    "projects.card_web_desc": "Estructuras web semánticas, diseño responsive avanzado con Grid/Flexbox, animaciones e interfaces accesibles.",
+    "projects.card_web_tag": "Arquitectura Web",
+
+    "projects.github_cta": "Explorar Repositorios en GitHub →",
+
+    // Experience
+    "exp.index": "03 // TRAYECTORIA",
+    "exp.title": "EXPERIENCIA Y FORMACIÓN",
+    "exp.desc": "Una progresión continua que une rigor técnico, liderazgo operativo y desarrollo web moderno.",
+
+    "exp.badge_inprogress": "ESTADO: EN CURSO",
+
+    "exp.date1": "Sep 2024 — En curso",
+    "exp.title1": "Máster Full Stack Developer",
+    "exp.company1": "ConquerBlocks Academy",
+    "exp.desc1": "Programa intensivo de ingeniería de software enfocado en tecnologías web modernas, programación práctica y arquitectura de aplicaciones.",
+
+    "exp.date2": "May 2019 — Sep 2025",
+    "exp.title2": "Agente Comercial y Coordinador Logístico",
+    "exp.company2": "Grupo Síndel, S.A.",
+    "exp.desc2": "Coordinación de operaciones logísticas, gestión de sistemas digitales de inventario y optimización de flujos de distribución.",
+
+    "exp.date3": "Ago 2017 — May 2019",
+    "exp.title3": "Operador de Logística y Rutas",
+    "exp.company3": "Grupo Síndel, S.A.",
+    "exp.desc3": "Planificación y ejecución de rutas logísticas regionales con foco en eficiencia de tiempos y cumplimiento de estándares.",
+
+    "exp.date4": "Sep 2014 — Jun 2016",
+    "exp.title4": "Técnico Superior en Sistemas Microinformáticos y Redes",
+    "exp.company4": "Instituto Navarro Santafé",
+    "exp.desc4": "Formación técnica académica en hardware, servidores, topología de redes, cableado estructurado y mantenimiento informático.",
+
+    "exp.certs_title": "CERTIFICACIONES Y CREDENCIALES",
+    "certs.verified_tag": "[CREDENCIALES VERIFICADAS]",
+    "certs.verified_pill": "✓ VERIFICADO",
+    "certs.aws": "AWS Educate — Generative AI",
+    "certs.aws_org": "Amazon Web Services · Insignia Verificada",
+    "certs.ai_log": "IA y Automatización para Logística",
+    "certs.ai_log_org": "Academia de Sistemas Logísticos",
+    "certs.python": "Certificación en Python",
+    "certs.python_org": "Instituto de Programación",
+    "certs.vibe": "IA, Vibe Coding y Automatización",
+    "certs.vibe_org": "Ingeniería de Software & IA",
+    "certs.sales": "Venta Consultiva y Negociación",
+    "certs.sales_org": "Programa de Habilidades Ejecutivas",
 
     // About
-    "about.label": 'Quién <span class="accent">Soy</span>',
-    "about.title": 'Sobre <span class="accent">Mí</span>',
-    "about.lead": "Entusiasta de la tecnología y estudiante de Desarrollo Web Full Stack con una sólida base en Sistemas IT y Operaciones — actualmente en transición hacia la ingeniería de software.",
-    "about.body": 'Con residencia en Vantaa, soy un profesional orientado al detalle formándome en Desarrollo Web Full Stack en <strong>Conquer Blocks Academy</strong>, aprovechando más de 8 años de sólida experiencia profesional.',
-    "about.stat_exp": "Años de Experiencia",
-    "about.stat_certs": "Certificaciones",
-    "about.stat_langs": "Idiomas",
+    "about.index": "04 // SOBRE MÍ",
+    "about.title": "PERFIL Y OBJETIVOS",
+    "about.lead": "Entusiasta de la tecnología en transición hacia la ingeniería de software — aportando más de 20 años en el mundo tech y más de 8 años de disciplina operativa.",
+    "about.body": "Residiendo en Vantaa (Finlandia), estoy dedicado al 100% al Máster Full Stack en ConquerBlocks. Mi trayectoria en logística y sistemas informáticos me aporta una visión orientada a la resolución metódica y eficaz de problemas.",
+    "about.stat_tech": "Años en Mundo Tech",
+    "about.stat_exp": "Años en Logística y Ops",
+    "about.stat_focus": "Máster Full Stack",
 
+    "about.langs_title": "IDIOMAS",
     "about.lang_es": "Español",
     "about.lang_en": "Inglés",
     "about.lang_fi": "Finlandés",
     "about.lvl_native": "Nativo",
     "about.lvl_prof": "Profesional",
-    "about.lvl_learning": "Aprendiendo",
-
-    "about.skills_label": 'Habilidades y herramientas que <span class="accent">Domino</span>',
-    "skills.frontend": "Frontend",
-    "skills.backend": "Backend",
-    "skills.ai": "IA y Automatización",
-    "skills.it": "Sistemas IT",
-    "skills.tools": "Git y Herramientas",
-    "skills.ops": "Operaciones",
-
-    // Experience
-    "exp.title": 'Mi <span class="accent">Experiencia Laboral</span>',
-    "exp.date1": "Sep 2024 — Actualidad",
-    "exp.title1": "Bootcamp de Desarrollo Full Stack",
-    "exp.desc1": "Programa intensivo full stack que abarca tecnologías web modernas, proyectos prácticos de programación y metodologías reales de desarrollo.",
-
-    "exp.date2": "May 2019 — Sep 2025",
-    "exp.title2": "Agente Comercial y Coordinador Logístico",
-    "exp.desc2": "Gestión de cuentas de clientes y coordinación de distribución regional utilizando sistemas digitales de inventario para optimizar flujos y precisión en entregas.",
-
-    "exp.date3": "Ago 2017 — Sep 2025",
-    "exp.title3": "Conductor de Reparto y Operador Logístico",
-    "exp.desc3": "Ejecución de operaciones diarias de entrega y rutas logísticas regionales con enfoque en puntualidad, optimización de rutas y protocolos de seguridad.",
-
-    "exp.date4": "Sep 2014 — Jun 2016",
-    "exp.title4": "Grado Superior en Sistemas IT e Instalaciones",
-    "exp.desc4": "Formación académica en infraestructura informática, hardware, redes, instalaciones eléctricas y resolución de incidencias.",
-
-    "exp.certs_label": 'Mis <span class="accent">Certificaciones</span>',
-    "certs.aws": "AWS Educate — IA Generativa",
-    "certs.ai_log": "IA y Automatización para Logística",
-    "certs.python": "Certificación Python",
-    "certs.vibe": "IA, Vibe Coding y Automatización",
-    "certs.sales": "Curso Experto en Ventas",
+    "about.lvl_learning": "En aprendizaje",
 
     // Contact
-    "contact.title": "¿Tienes una Gran Idea de Proyecto?",
-    "contact.sub": "Hablemos",
-    "contact.email_lbl": "Email",
-    "contact.phone_lbl": "Teléfono",
-    "contact.linkedin_lbl": "LinkedIn",
-    "contact.github_lbl": "GitHub",
+    "contact.index": "05 // CONTACTAR",
+    "contact.title": "¿HABLAMOS?",
+    "contact.desc": "¿Interesado en colaborar, conversar sobre tecnología o proyectos? Escríbeme por cualquiera de estos canales.",
+    
+    "contact.email_lbl": "CORREO DIRECTO",
+    "contact.phone_lbl": "TELÉFONO / WHATSAPP",
+    "contact.linkedin_lbl": "PERFIL LINKEDIN",
+    "contact.github_lbl": "REPOSITORIOS GITHUB",
+    
+    "form.label_name": "NOMBRE",
+    "form.placeholder_name": "Nombre completo",
+    "form.label_email": "EMAIL",
+    "form.placeholder_email": "tu.email@dominio.com",
+    "form.label_subject": "ASUNTO",
+    "form.placeholder_subject": "Asunto / Consulta de colaboración",
+    "form.label_message": "MENSAJE",
+    "form.placeholder_msg": "Escribe tu mensaje aquí...",
+    "form.btn_send": "ENVIAR MENSAJE",
+    "form.sending": "ENVIANDO…",
+    "form.err_name": "Por favor, introduce tu nombre.",
+    "form.err_email": "Por favor, introduce un email válido.",
+    "form.err_msg": "Por favor, escribe tu mensaje.",
+    "form.success": "✓ Cliente de correo abierto. ¡Gracias por contactar!",
 
-    "form.label_name": "Nombre Completo",
-    "form.label_email": "Email",
-    "form.label_subject": "Asunto",
-    "form.label_message": "Tu Mensaje",
-    "form.btn_send": "Enviar Mensaje",
-    "form.sending": "Enviando…",
-    "form.err_name": "Por favor escribe tu nombre.",
-    "form.err_email": "Por favor introduce un email válido.",
-    "form.err_msg": "Por favor escribe un mensaje.",
-    "form.success": "✅ Cliente de correo abierto. ¡Gracias por contactarme!",
+    // WhatsApp Floating Button
+    "whatsapp.tooltip": "Contactar por WhatsApp (Arrastrable)",
+
+    // Cookie Banner
+    "cookie.tag": "[PRIVACIDAD Y PREFERENCIAS]",
+    "cookie.title": "PREFERENCIAS DE COOKIES",
+    "cookie.text": "Este portfolio utiliza almacenamiento local mínimo para recordar tu idioma preferido y garantizar la mejor experiencia de navegación.",
+    "cookie.accept": "ACEPTAR Y CONTINUAR",
+    "cookie.decline": "RECHAZAR",
 
     // Footer
-    "footer.tagline": "Construyendo la web, línea a línea. 🚀",
-    "footer.copy_prefix": "Marcos Rodríguez Hernández · Vantaa, Helsinki, Finlandia"
+    "footer.tagline": "Construyendo mi futuro. // Vantaa, Finlandia.",
+    "footer.copy": "Marcos Rodríguez Hernández. Todos los derechos reservados."
   },
 
   fi: {
     // Page Meta
-    "meta.title": "Marcos Rodríguez — Full Stack -kehittäjä",
-    "meta.description": "Marcos Rodríguez Hernández — Full Stack -verkkokehittäjä, IT-järjestelmäasiantuntija ja logistiikka-ammattilainen Vantaalla, Helsingissä.",
+    "meta.title": "Marcos Rodríguez — Full Stack -kehittäjäopiskelija",
+    "meta.description": "Marcos Rodríguez Hernández — Full Stack -kehittäjäopiskelija (ConquerBlocks Master), IT-järjestelmäteknikko & logistiikan ammattilainen. Vantaa, Suomi.",
 
     // Navbar
-    "nav.home": "Koti",
-    "nav.projects": "Projektit",
-    "nav.about": "Tietoa Minusta",
-    "nav.contact": "Ota Yhteyttä",
+    "nav.brand": "M4rKitS.dev",
+    "nav.home": "01//ETUSIVU",
+    "nav.projects": "02//PROJEKTIT",
+    "nav.experience": "03//KOKEMUS",
+    "nav.about": "04//TIETOA MINUSTA",
+    "nav.contact": "05//OTA YHTEYTTÄ",
 
     // Hero
-    "hero.badge": "HEI!",
-    "hero.heading": 'Olen <span class="accent">Marcos</span> ,<br>Full Stack<br>-kehittäjä',
-    "hero.years_val": "8+ Vuotta",
-    "hero.years_lbl": "Kokemusta",
-    "hero.location": "Vantaa, Helsinki · Suomi",
-    "hero.btn_projects": "Katso Projektit <span>→</span>",
-    "hero.btn_contact": "Ota Yhteyttä",
-    "hero.quote": "Teknologiaintoilija siirtymässä ohjelmistokehitykseen — tuon yli 8 vuoden kokemuksen operaatioista ja järjestelmistä verkkokehityksen maailmaan.",
+    "hero.badge": "TILA: OPPIMASSA JA RAKENTAMASSA",
+    "hero.line1": "CREATIVE",
+    "hero.line2": "DEVELOPER",
+    "hero.role": "Marcos Rodríguez / Full Stack -kehittäjäopiskelija (ConquerBlocks)",
+    "hero.tagline": "// SKAALAUTUVIA JA KESTÄVIÄ WEB-RATKAISUJA.",
+    "hero.explore": "TUTUSTU TÖIHINI ↓",
+    "hero.bio": "Yli 20 vuoden teknologia-intohimo ja yli 8 vuoden kokemus logistiikasta ja IT-järjestelmistä. Tällä hetkellä suuntaamassa ohjelmistokehitykseen ConquerBlocks Full Stack Master -koulutuksen kautta. Asuinpaikka Vantaa, Suomi.",
+    "hero.btn_contact": "OTA YHTEYTTÄ →",
 
-    // Services / Projects
-    "projects.label": 'Minun <span class="accent">Palveluni</span>',
-    "projects.title": 'Mitä <span class="accent">Tarjoan</span>',
-    "projects.tab_webdev": "Verkkokehitys",
-    "projects.tab_fullstack": "Full Stack",
-    "projects.tab_ai": "Tekoäly & Automaatio",
-    "projects.tab_it": "IT-järjestelmät",
-    "projects.tab_ops": "Operaatiot",
+    // Projects & Technologies
+    "projects.index": "02 // TEKNOLOGIAT JA PROJEKTIT",
+    "projects.title": "TEKNOLOGIAT JA OSAAMINEN",
+    "projects.desc": "Työkalut, alustat ja teknologiat, joita käytän ja opiskelen aktiivisesti nykyaikaisten digitaalisten ratkaisujen rakentamiseen.",
+    
+    "projects.tab_all": "Kaikki teknologiat",
+    "projects.tab_ai_tools": "Tekoäly & Muotoilu",
+    "projects.tab_code": "Ohjelmointi & Logiikka",
+    "projects.tab_cloud": "Pilvi & Tietokannat",
 
-    "projects.card1_title": "Verkkokehitys",
-    "projects.card1_desc": "Modernien ja responsiivisten verkkosivujen sekä sovellusten kehittäminen käyttäen HTML-, CSS-, JavaScript- ja React-teknologioita. Keskittyen puhtaaseen koodiin ja suorituskykyyn.",
-    "projects.card2_title": "Full Stack -ratkaisut",
-    "projects.card2_desc": "Kokonaisvaltainen kehitys käyttöliittymistä taustajärjestelmien rajapintoihin ja tietokantoihin. Syvennän osaamistani intensiivisessä bootcamp-koulutuksessa.",
-    "projects.card3_title": "Tekoäly & Automaatio",
-    "projects.card3_desc": "Tekoälytyökalujen ja automaation hyödyntäminen työnkulkujen ja tuottavuuden tehostamiseksi. Sertifioitu generatiivisessa tekoälyssä (AWS) ja logistiikka-automaatiossa.",
-    "projects.card4_title": "IT-tuki & Järjestelmät",
-    "projects.card4_desc": "Tekninen tuki ja IT-järjestelmäkonsultointi tietotekniikan ja verkkojen asiantuntijana, sisältäen verkkoinfrastruktuurin, laitteiston ja vianmäärityksen.",
+    "projects.card_antigravity_title": "Google Antigravity",
+    "projects.card_antigravity_desc": "Tekoälyavusteinen agenttipohjainen ohjelmointi, parikoodaus ja tehokas työnkulkujen automatisointi.",
+    "projects.card_antigravity_tag": "Tekoäly & Agentit",
 
-    "projects.btn_all": "Katso Kaikki Projektit →",
+    "projects.card_stitch_title": "Google Stitch",
+    "projects.card_stitch_desc": "Nopea käyttöliittymäprototyypitys (UI/UX), design-järjestelmien luonti ja käyttöliittymäarkkitehtuuri tekoälyllä.",
+    "projects.card_stitch_tag": "UI / Design Systems",
+
+    "projects.card_python_title": "Python-ohjelmointi",
+    "projects.card_python_desc": "Ohjelmoinnin perusteet, automaatioskriptit, tietorakenteet ja datan käsittelyrutiinit.",
+    "projects.card_python_tag": "Ohjelmointi & Logiikka",
+
+    "projects.card_git_title": "Git & GitHub",
+    "projects.card_git_desc": "Versionhallinnan työnkulut, koodivarastojen hallinta, haarautuminen (branching) ja tiimityöskentely.",
+    "projects.card_git_tag": "Versionhallinta",
+
+    "projects.card_cloudflare_title": "Cloudflare-ekosysteemi",
+    "projects.card_cloudflare_desc": "Web-sovellusten julkaisu Cloudflare Pagesissa, DNS-hallinta, tietoturva ja reunalaskennan optimointi.",
+    "projects.card_cloudflare_tag": "Pilvi & Julkaisu",
+
+    "projects.card_supabase_title": "Supabase BaaS",
+    "projects.card_supabase_desc": "PostgreSQL-relaatiotietokannat, käyttäjien todennus, reaaliaikainen data ja palveliton taustajärjestelmä.",
+    "projects.card_supabase_tag": "Tietokanta & Auth",
+
+    "projects.card_web_title": "HTML5 & Moderni CSS3",
+    "projects.card_web_desc": "Semanttinen verkkorakenne, responsiivinen asettelu Grid- ja Flexbox-tekniikoilla, animaatiot ja saavutettavuus.",
+    "projects.card_web_tag": "Frontend-arkkitehtuuri",
+
+    "projects.github_cta": "Tutustu GitHub-varastoihin →",
+
+    // Experience
+    "exp.index": "03 // URAPOLKU",
+    "exp.title": "TYÖKOKEMUS JA KOULUTUS",
+    "exp.desc": "Jatkuva ammatillinen kehitys, jossa yhdistyvät tekninen koulutus, operatiivinen johtajuus ja moderni ohjelmistokehitys.",
+
+    "exp.badge_inprogress": "TILA: KÄYNNISSÄ",
+
+    "exp.date1": "Syys 2024 — Meneillään",
+    "exp.title1": "Master Full Stack Developer",
+    "exp.company1": "ConquerBlocks Academy",
+    "exp.desc1": "Kattava ohjelmistokehitysohjelma, joka keskittyy moderneihin verkkoteknologioihin, käytännön koodaukseen ja sovellusarkkitehtuuriin.",
+
+    "exp.date2": "Touko 2019 — Syys 2025",
+    "exp.title2": "Myyntiedustaja & Logistiikkakoordinaattori",
+    "exp.company2": "Grupo Síndel, S.A.",
+    "exp.desc2": "Logistiikkatoimintojen koordinointi, digitaalisten varastojärjestelmien hallinta ja toimitusketjujen tehostaminen korkealla toimitusvarmuudella.",
+
+    "exp.date3": "Elo 2017 — Touko 2019",
+    "exp.title3": "Logistiikan ja jakelun asiantuntija",
+    "exp.company3": "Grupo Síndel, S.A.",
+    "exp.desc3": "Alueellisten toimitusreittien optimointi, kaluston aikataulutus ja täsmällinen toimituslogistiikka.",
+
+    "exp.date4": "Syys 2014 — Kesä 2016",
+    "exp.title4": "Tieto- ja viestintätekniikan erikoisammattitutkinto",
+    "exp.company4": "Instituto Navarro Santafé",
+    "exp.desc4": "Tietokonelaitteistojen, palvelimien, verkkotopologioiden, kaapeloinnin ja järjestelmäylläpidon tekninen tutkinto.",
+
+    "exp.certs_title": "SERTIFIKAATIT JA PÄTEVYYDET",
+    "certs.verified_tag": "[VAHVISTETUT PÄTEVYYDET]",
+    "certs.verified_pill": "✓ VAHVISTETTU",
+    "certs.aws": "AWS Educate — Generative AI",
+    "certs.aws_org": "Amazon Web Services · Vahvistettu merkki",
+    "certs.ai_log": "Tekoäly ja automaatio logistiikassa",
+    "certs.ai_log_org": "Logistiikkajärjestelmien akatemia",
+    "certs.python": "Python-sertifikaatti",
+    "certs.python_org": "Ohjelmointi-instituutti",
+    "certs.vibe": "Tekoäly ja työnkulun automaatio",
+    "certs.vibe_org": "Moderni tekoälykehitys",
+    "certs.sales": "Asiantuntijamyynti ja neuvottelutaito",
+    "certs.sales_org": "Liiketoimintaosaamisen ohjelma",
 
     // About
-    "about.label": 'Kuka <span class="accent">Olen</span>',
-    "about.title": 'Tietoa <span class="accent">Minusta</span>',
-    "about.lead": "Teknologiaintoilija ja Full Stack -verkkokehityksen opiskelija vahvalla IT-järjestelmien ja operaatioiden taustalla — siirtymässä ohjelmistokehityksen ammattilaiseksi.",
-    "about.body": 'Asun Vantaalla ja olen tarkka ammattilainen, joka opiskelee Full Stack -verkkokehitystä <strong>Conquer Blocks Academyssa</strong> hyödyntäen yli 8 vuoden työkokemustani.',
-    "about.stat_exp": "Vuotta Kokemusta",
-    "about.stat_certs": "Sertifikaattia",
-    "about.stat_langs": "Kieltä",
+    "about.index": "04 // TIETOA MINUSTA",
+    "about.title": "TAUSTA JA TAVOITTEET",
+    "about.lead": "Teknologia-intoilija siirtymässä ohjelmistokehitykseen — tuomassa yli 20 vuoden teknologia-intohimon ja yli 8 vuoden operatiivisen kurinalaisuuden verkkokehityksen maailmaan.",
+    "about.body": "Asun Vantaalla ja keskityn tällä hetkellä täysipäiväisesti ConquerBlocksin Full Stack Master -opintoihin. IT-järjestelmä- ja logistiikkataustani antaa minulle vahvan ja ratkaisukeskeisen ajattelutavan.",
+    "about.stat_tech": "Vuotta teknologia-alalla",
+    "about.stat_exp": "Vuotta logistiikassa",
+    "about.stat_focus": "Master Full Stack",
 
+    "about.langs_title": "KIELET",
     "about.lang_es": "Espanja",
     "about.lang_en": "Englanti",
     "about.lang_fi": "Suomi",
     "about.lvl_native": "Äidinkieli",
-    "about.lvl_prof": "Ammatillinen",
+    "about.lvl_prof": "Ammattitaitoinen",
     "about.lvl_learning": "Opiskelen",
 
-    "about.skills_label": 'Taidot ja työkalut jotka <span class="accent">Hallitsen</span>',
-    "skills.frontend": "Frontend",
-    "skills.backend": "Backend",
-    "skills.ai": "Tekoäly & Automaatio",
-    "skills.it": "IT-järjestelmät",
-    "skills.tools": "Git & Työkalut",
-    "skills.ops": "Operaatiot",
-
-    // Experience
-    "exp.title": 'Työ<span class="accent">kokemukseni</span>',
-    "exp.date1": "Syys 2024 — Nykyhetki",
-    "exp.title1": "Full Stack -kehityksen Bootcamp",
-    "exp.desc1": "Intensiivinen full stack -ohjelma, joka kattaa modernit verkkoteknologiat, käytännön ohjelmointiprojektit ja alan parhaat käytännöt.",
-
-    "exp.date2": "Touko 2019 — Syys 2025",
-    "exp.title2": "Myyntiedustaja & Logistiikkakoordinaattori",
-    "exp.desc2": "Asiakastilien hallinta ja alueellisen jakelun koordinointi digitaalisilla varastojärjestelmillä toimitusvarmuuden ja työnkulkujen tehostamiseksi.",
-
-    "exp.date3": "Elo 2017 — Syys 2025",
-    "exp.title3": "Kuljettaja & Logistiikkatyöntekijä",
-    "exp.desc3": "Päivittäisten kuljetusten ja jakelureittien hoitaminen panostaen aikataulujen pitävyyteen, reittioptimointiin ja turvallisuusohjeisiin.",
-
-    "exp.date4": "Syys 2014 — Kesä 2016",
-    "exp.title4": "Ammatillinen Tutkinto — IT-järjestelmät",
-    "exp.desc4": "Koulutus tietotekniikkainfrastruktuurissa, laitteistoissa, verkoissa, sähköasennuksissa ja vianmäärityksessä.",
-
-    "exp.certs_label": 'Minun <span class="accent">Sertifikaattini</span>',
-    "certs.aws": "AWS Educate — Generatiivinen Tekoäly",
-    "certs.ai_log": "Tekoäly & Automaatio Logistiikassa",
-    "certs.python": "Python-sertifiointi",
-    "certs.vibe": "Tekoäly, Vibe Coding & Automaatio",
-    "certs.sales": "Myynnin Asiantuntijakoulutus",
-
     // Contact
-    "contact.title": "Onko Sinulla Mahtava Projekti-idea?",
-    "contact.sub": "Keskustellaan",
-    "contact.email_lbl": "Sähköposti",
-    "contact.phone_lbl": "Puhelin",
-    "contact.linkedin_lbl": "LinkedIn",
-    "contact.github_lbl": "GitHub",
+    "contact.index": "05 // YHTEYDENOTTO",
+    "contact.title": "RAKENNETAANKO JOTAIN YHDESSÄ?",
+    "contact.desc": "Oletko kiinnostunut yhteistyöstä tai keskustelemaan teknologiasta? Ota yhteyttä alla olevien kanavien kautta.",
+    
+    "contact.email_lbl": "SUORA SÄHKÖPOSTI",
+    "contact.phone_lbl": "PUHELIN / WHATSAPP",
+    "contact.linkedin_lbl": "LINKEDIN-PROFIILI",
+    "contact.github_lbl": "GITHUB-REPOSITORIOT",
+    
+    "form.label_name": "NIMI",
+    "form.placeholder_name": "Koko nimi",
+    "form.label_email": "SÄHKÖPOSTI",
+    "form.placeholder_email": "sahkopostisi@osoite.fi",
+    "form.label_subject": "AIHE",
+    "form.placeholder_subject": "Yhteydenotto / Yhteistyökysely",
+    "form.label_message": "VIESTI",
+    "form.placeholder_msg": "Kirjoita viestisi tähän…",
+    "form.btn_send": "LÄHETÄ VIESTI",
+    "form.sending": "LÄHETETÄÄN…",
+    "form.err_name": "Ole hyvä ja anna nimesi.",
+    "form.err_email": "Ole hyvä ja anna kelvollinen sähköpostiosoite.",
+    "form.err_msg": "Ole hyvä ja kirjoita viesti.",
+    "form.success": "✓ Sähköpostiohjelma avattu. Kiitos yhteydenotosta!",
 
-    "form.label_name": "Koko Nimi",
-    "form.label_email": "Sähköposti",
-    "form.label_subject": "Aihe",
-    "form.label_message": "Viestisi",
-    "form.btn_send": "Lähetä Viesti",
-    "form.sending": "Lähetetään…",
-    "form.err_name": "Kirjoita nimesi.",
-    "form.err_email": "Anna kelvollinen sähköpostiosoite.",
-    "form.err_msg": "Kirjoita viesti.",
-    "form.success": "✅ Sähköpostiohjelma avattu. Kiitos yhteydenotosta!",
+    // WhatsApp Floating Button
+    "whatsapp.tooltip": "Keskustele WhatsAppissa (Vedettävä)",
+
+    // Cookie Banner
+    "cookie.tag": "[YKSITYISYYS JA ASETUKSET]",
+    "cookie.title": "EVÄSTEVALINNAT",
+    "cookie.text": "Tämä sivusto käyttää paikallista tallennustilaa kielen muistamiseen ja selauskokemuksen optimointiin.",
+    "cookie.accept": "HYVÄKSY JA JATKA",
+    "cookie.decline": "HYLKÄÄ",
 
     // Footer
-    "footer.tagline": "Rakentamassa verkkoa, koodirivi kerrallaan. 🚀",
-    "footer.copy_prefix": "Marcos Rodríguez Hernández · Vantaa, Helsinki, Suomi"
+    "footer.tagline": "Rakentamassa tulevaisuuttani. // Vantaa, Suomi.",
+    "footer.copy": "Marcos Rodríguez Hernández. Kaikki oikeudet pidätetään."
   }
 };
