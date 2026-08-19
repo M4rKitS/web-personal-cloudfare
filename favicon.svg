@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#050505"/>
+  <rect x="2" y="2" width="60" height="60" rx="12" fill="none" stroke="#222222" stroke-width="2"/>
+  <!-- Modern Tech Monogram M. with Accent Dot -->
+  <path d="M16 46V18h6.5l9.5 16 9.5-16H48v28h-6V29.5L33.5 44h-3L22 29.5V46H16z" fill="#FFFFFF"/>
+  <circle cx="51" cy="43.5" r="3.5" fill="#10b981"/>
+</svg>

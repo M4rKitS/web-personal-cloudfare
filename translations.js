@@ -6,7 +6,7 @@
 const TRANSLATIONS = {
   en: {
     // Page Meta
-    "meta.title": "Marcos Rodríguez — Full Stack Developer in Training",
+    "meta.title": "Creative Developer",
     "meta.description": "Marcos Rodríguez Hernández — Aspiring Full Stack Developer (ConquerBlocks Master), IT Systems Technician & 8+ Years Operations Professional based in Vantaa, Finland.",
 
     // Navbar
@@ -156,7 +156,7 @@ const TRANSLATIONS = {
     // Cookie Banner
     "cookie.tag": "[PRIVACY & PREFERENCES]",
     "cookie.title": "COOKIE PREFERENCES",
-    "cookie.text": "This portfolio uses minimal local storage to remember your language preference and improve your browsing experience.",
+    "cookie.text": "This website uses essential technical cookies and local storage to save your language preferences, optimize performance, and ensure a secure, seamless browsing experience.",
     "cookie.accept": "ACCEPT & PROCEED",
     "cookie.decline": "DECLINE",
 
@@ -167,7 +167,7 @@ const TRANSLATIONS = {
 
   es: {
     // Page Meta
-    "meta.title": "Marcos Rodríguez — Estudiante de Desarrollo Full Stack",
+    "meta.title": "Creative Developer",
     "meta.description": "Marcos Rodríguez Hernández — Estudiante del Máster Full Stack (ConquerBlocks), Técnico en Sistemas Microinformáticos y +8 años en Operaciones. Vantaa, Finlandia.",
 
     // Navbar
@@ -317,7 +317,7 @@ const TRANSLATIONS = {
     // Cookie Banner
     "cookie.tag": "[PRIVACIDAD Y PREFERENCIAS]",
     "cookie.title": "PREFERENCIAS DE COOKIES",
-    "cookie.text": "Este portfolio utiliza almacenamiento local mínimo para recordar tu idioma preferido y garantizar la mejor experiencia de navegación.",
+    "cookie.text": "Este sitio web utiliza cookies técnicas y almacenamiento esencial para guardar tus preferencias de idioma, optimizar la experiencia de navegación y garantizar un rendimiento seguro y fluido.",
     "cookie.accept": "ACEPTAR Y CONTINUAR",
     "cookie.decline": "RECHAZAR",
 
@@ -328,7 +328,7 @@ const TRANSLATIONS = {
 
   fi: {
     // Page Meta
-    "meta.title": "Marcos Rodríguez — Full Stack -kehittäjäopiskelija",
+    "meta.title": "Creative Developer",
     "meta.description": "Marcos Rodríguez Hernández — Full Stack -kehittäjäopiskelija (ConquerBlocks Master), IT-järjestelmäteknikko & logistiikan ammattilainen. Vantaa, Suomi.",
 
     // Navbar
@@ -478,7 +478,7 @@ const TRANSLATIONS = {
     // Cookie Banner
     "cookie.tag": "[YKSITYISYYS JA ASETUKSET]",
     "cookie.title": "EVÄSTEVALINNAT",
-    "cookie.text": "Tämä sivusto käyttää paikallista tallennustilaa kielen muistamiseen ja selauskokemuksen optimointiin.",
+    "cookie.text": "Tämä verkkosivusto käyttää välttämättömiä teknisiä evästeitä ja paikallista tallennustilaa kielivalintojen muistamiseen, suorituskyvyn optimointiin ja sujuvaan selauskokemukseen.",
     "cookie.accept": "HYVÄKSY JA JATKA",
     "cookie.decline": "HYLKÄÄ",
 
