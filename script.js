@@ -440,20 +440,22 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
           waContainer.releasePointerCapture(e.pointerId);
         } catch (err) {}
+
+        // If user just clicked without dragging, manually open the link 
+        // since pointerCapture swallows the native child click event.
+        if (!hasMoved && waBtn) {
+          window.open(waBtn.href, '_blank', 'noopener,noreferrer');
+        }
       }
     }
 
     waContainer.addEventListener('pointerup', endDrag);
     waContainer.addEventListener('pointercancel', endDrag);
 
-    // If user dragged the button, cancel opening link
+    // Prevent default click completely to avoid double-firing or conflicts
     if (waBtn) {
       waBtn.addEventListener('click', (e) => {
-        if (hasMoved) {
-          e.preventDefault();
-          e.stopPropagation();
-          hasMoved = false;
-        }
+        e.preventDefault();
       });
     }
   }
