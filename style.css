@@ -1414,6 +1414,54 @@ img, svg {
 }
 
 @media (max-width: 768px) {
+  /* Center overall layouts */
+  .hero-content {
+    align-items: center;
+    text-align: center;
+  }
+  .hero-title {
+    font-size: clamp(3.5rem, 15vw, 5rem);
+    text-align: center;
+  }
+  .hero-badge {
+    margin: 0 auto 1.5rem auto;
+  }
+  .btn-group {
+    justify-content: center;
+  }
+  
+  .section-meta {
+    align-items: center;
+    text-align: center;
+  }
+  .section-lead {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .about-text-area {
+    text-align: center;
+  }
+  .about-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  /* Header Optimization */
+  .nav-social {
+    display: none; /* Hide in header to save space on mobile */
+  }
+  .nav-brand {
+    font-size: 1rem;
+  }
+  .nav-actions {
+    gap: 0.75rem;
+  }
+
+  /* Reduce Canvas Opacity so text is always readable */
+  .global-particle-canvas {
+    opacity: 0.25;
+  }
+
+  /* Mobile Menu */
   .nav-menu {
     position: fixed;
     top: var(--header-height);
@@ -1438,6 +1486,7 @@ img, svg {
   .nav-list {
     flex-direction: column;
     gap: 1.5rem;
+    align-items: center;
   }
 
   .nav-toggle {
@@ -1445,11 +1494,7 @@ img, svg {
   }
 
   .section {
-    padding: 5rem 0;
-  }
-
-  .about-metrics {
-    grid-template-columns: 1fr;
+    padding: 4rem 0;
   }
 
   .cookie-banner {
