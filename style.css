@@ -1414,22 +1414,12 @@ img, svg {
 }
 
 @media (max-width: 768px) {
-  /* Center overall layouts */
-  .hero-content {
-    align-items: center;
-    text-align: center;
-  }
+  /* Keep Hero left-aligned, but adjust font size */
   .hero-title {
     font-size: clamp(3.5rem, 15vw, 5rem);
-    text-align: center;
-  }
-  .hero-badge {
-    margin: 0 auto 1.5rem auto;
-  }
-  .btn-group {
-    justify-content: center;
   }
   
+  /* Center other section metadata */
   .section-meta {
     align-items: center;
     text-align: center;
