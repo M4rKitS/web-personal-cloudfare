@@ -131,7 +131,7 @@ img, svg {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   pointer-events: none;
   z-index: 0;
@@ -1420,17 +1420,6 @@ img, svg {
   }
   
   /* Center other section metadata */
-  .section-meta {
-    align-items: center;
-    text-align: center;
-  }
-  .section-lead {
-    text-align: center;
-    margin: 0 auto;
-  }
-  .about-text-area {
-    text-align: center;
-  }
   .about-metrics {
     grid-template-columns: 1fr;
   }
