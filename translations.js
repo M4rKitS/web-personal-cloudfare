@@ -111,9 +111,9 @@ const TRANSLATIONS = {
     // About
     "about.index": "04 // ABOUT ME",
     "about.title": "BACKGROUND & MISSION",
-    "about.lead": "Technologist transitioning into software engineering — bringing 20+ years of passion for tech and 8+ years of operational discipline into web development.",
-    "about.body": "Living in Vantaa (Finland), I am currently dedicating my full focus to the Full Stack Master at ConquerBlocks. My background in IT systems and logistics gives me a unique problem-solving mindset: structured, efficient, and resilient.",
-    "about.stat_tech": "Years in Tech World",
+    "about.lead": "Technologist transitioning into software engineering — bringing a technical foundation established in 2006 and 8+ years of operational discipline into web development.",
+    "about.body": "Living in Vantaa (Finland), I am currently dedicating my full focus to the Full Stack Master at ConquerBlocks. My professional background in logistics, combined with my early training in IT systems, gives me a unique problem-solving mindset: structured, efficient, and resilient.",
+    "about.stat_tech": "Technical Training",
     "about.stat_exp": "Logistics & Operations",
     "about.stat_focus": "Master Full Stack",
 
@@ -272,9 +272,9 @@ const TRANSLATIONS = {
     // About
     "about.index": "04 // SOBRE MÍ",
     "about.title": "PERFIL Y OBJETIVOS",
-    "about.lead": "Entusiasta de la tecnología en transición hacia la ingeniería de software — aportando más de 20 años en el mundo tech y más de 8 años de disciplina operativa.",
-    "about.body": "Residiendo en Vantaa (Finlandia), estoy dedicado al 100% al Máster Full Stack en ConquerBlocks. Mi trayectoria en logística y sistemas informáticos me aporta una visión orientada a la resolución metódica y eficaz de problemas.",
-    "about.stat_tech": "Años en Mundo Tech",
+    "about.lead": "Entusiasta de la tecnología en transición hacia la ingeniería de software — con formación técnica desde 2006 y más de 8 años de disciplina operativa.",
+    "about.body": "Residiendo en Vantaa (Finlandia), estoy dedicado al 100% al Máster Full Stack en ConquerBlocks. Mi trayectoria profesional en logística, combinada con mi base técnica en sistemas informáticos, me aporta una visión orientada a la resolución metódica y eficaz de problemas.",
+    "about.stat_tech": "Formación técnica",
     "about.stat_exp": "Años en Logística y Ops",
     "about.stat_focus": "Máster Full Stack",
 
@@ -433,9 +433,9 @@ const TRANSLATIONS = {
     // About
     "about.index": "04 // TIETOA MINUSTA",
     "about.title": "TAUSTA JA TAVOITTEET",
-    "about.lead": "Teknologia-intoilija siirtymässä ohjelmistokehitykseen — tuomassa yli 20 vuoden teknologia-intohimon ja yli 8 vuoden operatiivisen kurinalaisuuden verkkokehityksen maailmaan.",
-    "about.body": "Asun Vantaalla ja keskityn tällä hetkellä täysipäiväisesti ConquerBlocksin Full Stack Master -opintoihin. IT-järjestelmä- ja logistiikkataustani antaa minulle vahvan ja ratkaisukeskeisen ajattelutavan.",
-    "about.stat_tech": "Vuotta teknologia-alalla",
+    "about.lead": "Teknologia-intoilija siirtymässä ohjelmistokehitykseen — tuomassa teknisen perustan vuodelta 2006 ja yli 8 vuoden operatiivisen kurinalaisuuden verkkokehityksen maailmaan.",
+    "about.body": "Asun Vantaalla ja keskityn tällä hetkellä täysipäiväisesti ConquerBlocksin Full Stack Master -opintoihin. Ammatillinen taustani logistiikassa, yhdistettynä IT-järjestelmien koulutukseen, antaa minulle vahvan ja ratkaisukeskeisen ajattelutavan.",
+    "about.stat_tech": "Tekninen koulutus",
     "about.stat_exp": "Vuotta logistiikassa",
     "about.stat_focus": "Master Full Stack",
 
