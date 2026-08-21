@@ -58,8 +58,9 @@ const TRANSLATIONS = {
     "projects.card_cloudflare_tag": "Cloud & Hosting",
 
     "projects.card_supabase_title": "Supabase BaaS",
-    "projects.card_supabase_desc": "PostgreSQL database management, authentication flows, real-time data, and serverless backend integration.",
+    "projects.card_supabase_desc": "Relational PostgreSQL databases, user authentication, real-time data, and serverless backend.",
     "projects.card_supabase_tag": "Database & Auth",
+    "projects.learning_pill": "⟳ LEARNING / BASIC",
 
     "projects.card_web_title": "HTML5 & Modern CSS3",
     "projects.card_web_desc": "Semantic web architecture, responsive layouts, CSS grid/flexbox, animations, and accessible interfaces.",
@@ -95,8 +96,12 @@ const TRANSLATIONS = {
     "exp.desc4": "Technical academic training covering computer hardware, server administration, network topologies, and systems maintenance.",
 
     "exp.certs_title": "CERTIFICATIONS & CREDENTIALS",
-    "certs.verified_tag": "[VERIFIED CREDENTIALS]",
+    "certs.verified_tag": "[VERIFIED CREDENTIALS & TRAINING]",
+    "certs.external_title": "OFFICIAL CERTIFICATIONS",
+    "certs.modules_title": "SPECIALIZATION MODULES (MASTER)",
     "certs.verified_pill": "✓ VERIFIED",
+    "certs.master_pill": "✦ COMPLETED (MASTER)",
+
     "certs.aws": "AWS Educate — Generative AI",
     "certs.aws_org": "Amazon Web Services · Verified Badge",
     "certs.ai_log": "AI & Automation for Logistics",
@@ -221,6 +226,7 @@ const TRANSLATIONS = {
     "projects.card_supabase_title": "Supabase BaaS",
     "projects.card_supabase_desc": "Bases de datos relacionales PostgreSQL, autenticación de usuarios, datos en tiempo real y backend serverless.",
     "projects.card_supabase_tag": "Base de Datos & Auth",
+    "projects.learning_pill": "⟳ EN APRENDIZAJE / BÁSICO",
 
     "projects.card_web_title": "HTML5 & CSS3 Moderno",
     "projects.card_web_desc": "Estructuras web semánticas, diseño responsive avanzado con Grid/Flexbox, animaciones e interfaces accesibles.",
@@ -256,8 +262,12 @@ const TRANSLATIONS = {
     "exp.desc4": "Formación técnica académica en hardware, servidores, topología de redes, cableado estructurado y mantenimiento informático.",
 
     "exp.certs_title": "CERTIFICACIONES Y CREDENCIALES",
-    "certs.verified_tag": "[CREDENCIALES VERIFICADAS]",
+    "certs.verified_tag": "[CREDENCIALES Y FORMACIÓN]",
+    "certs.external_title": "CERTIFICACIONES OFICIALES",
+    "certs.modules_title": "MÓDULOS DE ESPECIALIZACIÓN (MÁSTER)",
     "certs.verified_pill": "✓ VERIFICADO",
+    "certs.master_pill": "✦ COMPLETADO (MÁSTER)",
+
     "certs.aws": "AWS Educate — Generative AI",
     "certs.aws_org": "Amazon Web Services · Insignia Verificada",
     "certs.ai_log": "IA y Automatización para Logística",
@@ -380,8 +390,9 @@ const TRANSLATIONS = {
     "projects.card_cloudflare_tag": "Pilvi & Julkaisu",
 
     "projects.card_supabase_title": "Supabase BaaS",
-    "projects.card_supabase_desc": "PostgreSQL-relaatiotietokannat, käyttäjien todennus, reaaliaikainen data ja palveliton taustajärjestelmä.",
+    "projects.card_supabase_desc": "Relaatiotietokannat (PostgreSQL), käyttäjien todennus, reaaliaikainen data ja palvelimeton backend.",
     "projects.card_supabase_tag": "Tietokanta & Auth",
+    "projects.learning_pill": "⟳ OPISKELEN / PERUSTASO",
 
     "projects.card_web_title": "HTML5 & Moderni CSS3",
     "projects.card_web_desc": "Semanttinen verkkorakenne, responsiivinen asettelu Grid- ja Flexbox-tekniikoilla, animaatiot ja saavutettavuus.",
