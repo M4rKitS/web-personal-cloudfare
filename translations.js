@@ -18,13 +18,13 @@ const TRANSLATIONS = {
     "nav.contact": "05//CONTACT",
 
     // Hero
-    "hero.badge": "STATUS: LEARNING & BUILDING",
-    "hero.line1": "CREATIVE",
+    "hero.badge": "STATUS: AVAILABLE FOR PROJECTS",
+    "hero.line1": "WEB",
     "hero.line2": "DEVELOPER",
-    "hero.role": "Marcos Rodríguez <br /> Full Stack Developer in Training (ConquerBlocks)",
-    "hero.tagline": "// SCALABLE & RESILIENT WEB SOLUTIONS.",
+    "hero.role": "Marcos Rodríguez <br /> Full Stack Developer — modern web development for small businesses and entrepreneurs looking to stand out online.",
+    "hero.tagline": "// I build the web your business needs.",
     "hero.explore": "EXPLORE MY WORK ↓",
-    "hero.bio": "20+ years passion for tech & 8+ years background in logistics & IT systems, transitioning into software engineering with the ConquerBlocks Full Stack Master. Based in Vantaa, Finland.",
+    "hero.bio": "+8 years of professional experience in IT systems and operations, now applied to web development. Based in Vantaa, Finland.",
     "hero.btn_contact": "INITIATE CONTACT →",
 
     // Projects & Technologies
@@ -179,13 +179,13 @@ const TRANSLATIONS = {
     "nav.contact": "05//CONTACTO",
 
     // Hero
-    "hero.badge": "ESTADO: APRENDIENDO Y CONSTRUYENDO",
-    "hero.line1": "CREATIVE",
+    "hero.badge": "ESTADO: DISPONIBLE PARA PROYECTOS",
+    "hero.line1": "WEB",
     "hero.line2": "DEVELOPER",
-    "hero.role": "Marcos Rodríguez <br /> Full Stack Developer in Training (ConquerBlocks)",
-    "hero.tagline": "// SOLUCIONES WEB ESCALABLES Y RESILIENTES.",
+    "hero.role": "Marcos Rodríguez <br /> Full Stack Developer — desarrollo web moderno para pequeños negocios y emprendedores que quieren destacar online.",
+    "hero.tagline": "// Construyo la web que tu negocio necesita.",
     "hero.explore": "EXPLORAR MI TRABAJO ↓",
-    "hero.bio": "+20 años de pasión tecnológica y +8 años de experiencia en logística y sistemas IT, en plena transición al desarrollo de software con el Máster Full Stack de ConquerBlocks. Residiendo en Vantaa, Finlandia.",
+    "hero.bio": "+8 años de experiencia profesional en sistemas y operaciones, ahora aplicados al desarrollo web. Basado en Vantaa, Finlandia.",
     "hero.btn_contact": "INICIAR CONTACTO →",
 
     // Projects & Technologies
@@ -340,13 +340,13 @@ const TRANSLATIONS = {
     "nav.contact": "05//OTA YHTEYTTÄ",
 
     // Hero
-    "hero.badge": "TILA: OPPIMASSA JA RAKENTAMASSA",
-    "hero.line1": "CREATIVE",
+    "hero.badge": "TILA: SAATAVILLA PROJEKTEIHIN",
+    "hero.line1": "WEB",
     "hero.line2": "DEVELOPER",
-    "hero.role": "Marcos Rodríguez <br /> Full Stack -kehittäjäopiskelija (ConquerBlocks)",
-    "hero.tagline": "// SKAALAUTUVIA JA KESTÄVIÄ WEB-RATKAISUJA.",
+    "hero.role": "Marcos Rodríguez <br /> Full Stack -kehittäjä — modernia verkkokehitystä pienyrityksille ja yrittäjille, jotka haluavat erottua verkossa.",
+    "hero.tagline": "// Rakennan verkon, jota yrityksesi tarvitsee.",
     "hero.explore": "TUTUSTU TÖIHINI ↓",
-    "hero.bio": "Yli 20 vuoden teknologia-intohimo ja yli 8 vuoden kokemus logistiikasta ja IT-järjestelmistä. Tällä hetkellä suuntaamassa ohjelmistokehitykseen ConquerBlocks Full Stack Master -koulutuksen kautta. Asuinpaikka Vantaa, Suomi.",
+    "hero.bio": "Yli 8 vuoden ammattikokemus IT-järjestelmistä ja operaatioista, nyt sovellettuna verkkokehitykseen. Asuinpaikka Vantaa, Suomi.",
     "hero.btn_contact": "OTA YHTEYTTÄ →",
 
     // Projects & Technologies
