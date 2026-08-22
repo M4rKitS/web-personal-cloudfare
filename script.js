@@ -52,6 +52,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
+
+    // Clear form feedback on language change
+    const formFeedback = document.getElementById('form-feedback');
+    if (formFeedback) {
+      formFeedback.removeAttribute('data-i18n');
+      formFeedback.textContent = '';
+      formFeedback.className = 'form-feedback ';
+    }
   }
 
   // Language switcher event listeners
@@ -273,6 +281,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const submitBtn = document.getElementById('contact-submit');
 
   if (contactForm) {
+    // Clear feedback when user starts typing again
+    contactForm.addEventListener('input', () => {
+      showFeedback('', '');
+    });
+
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
