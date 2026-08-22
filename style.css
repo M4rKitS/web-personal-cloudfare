@@ -1475,6 +1475,9 @@ img, svg {
     justify-content: center;
     gap: 1.5rem;
     margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-subtle);
+    width: 100%;
   }
   .nav-brand {
     font-size: 1rem;
@@ -1494,8 +1497,7 @@ img, svg {
     top: var(--header-height);
     left: 0;
     width: 100%;
-    background: rgba(5, 5, 5, 0.98);
-    backdrop-filter: blur(20px);
+    background: #050505;
     border-bottom: 1px solid var(--border-medium);
     padding: 2rem 1.5rem;
     transform: translateY(-120%);
@@ -1512,7 +1514,7 @@ img, svg {
 
   .nav-list {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
     align-items: center;
   }
 
