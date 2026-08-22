@@ -1547,9 +1547,10 @@ img, svg {
     flex-shrink: 0;
   }
 
-  /* 2. Timeline titles: force same font-size, use clamp to avoid 4 lines */
+  /* 2. Timeline titles: force font-size to fit in 3 lines */
   .log-title {
-    font-size: clamp(0.95rem, 4.5vw, 1.125rem) !important;
+    font-size: 0.95rem !important; /* Safely small enough to fit 'Técnico Superior' in 3 lines */
+    line-height: 1.4;
   }
 
   /* 3. Certifications Cards badge overflow */
@@ -1571,8 +1572,45 @@ img, svg {
     max-width: none;
   }
 
-  /* 6. Timeline log gap reduction */
+  /* 6. Standardize padding across all content cards to ensure identical mobile widths */
+  .log-content,
+  .certs-block,
+  .stack-card,
+  .side-card {
+    box-sizing: border-box;
+    padding: 1.5rem !important; /* Uniform padding for all main layout cards */
+  }
+
+  /* 7. Timeline Mobile Redesign: Maximizes width by moving the dot inside the card border */
   .log-entry {
-    gap: 1rem;
+    display: block; /* Removes grid column, giving the card 100% of the horizontal space */
+    margin-bottom: 2rem;
+  }
+  .log-marker {
+    display: none; /* Hide the desktop grid marker */
+  }
+  .log-content {
+    border-left-width: 4px !important; /* Uses the left border as the timeline line */
+  }
+  .log-entry.current .log-content {
+    border-left-color: var(--accent-green) !important;
+  }
+  .log-content::before {
+    content: '';
+    position: absolute;
+    left: -7px; /* Centers the 10px dot exactly on the 4px border */
+    top: 1.5rem; /* Aligns with the new uniform padding */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--border-medium);
+    border: 2px solid var(--bg-card);
+    z-index: 2;
+    box-sizing: content-box;
+  }
+  .log-entry.current .log-content::before {
+    background-color: var(--accent-green);
+    box-shadow: 0 0 10px var(--accent-green);
+    border-color: var(--bg-card);
   }
 }
