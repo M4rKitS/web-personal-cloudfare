@@ -1533,4 +1533,32 @@ img, svg {
     bottom: 5rem;
     right: 1.5rem;
   }
+
+  /* BUG FIXES (Mobile Only) */
+  /* 1. Certifications Accordion: align left, no wrap */
+  .certs-accordion-btn {
+    text-align: left;
+  }
+  .accordion-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 85%;
+  }
+
+  /* 2. Timeline titles: force same font-size */
+  .log-title {
+    font-size: 1.125rem !important; /* Forces all titles to exactly match the global defined size even if inherited otherwise */
+  }
+
+  /* 3. Stack Card hover active state (white line) disabled on mobile */
+  .stack-card:hover::before {
+    background: transparent !important;
+  }
+
+  /* 4. Language Side Card max-width removed to match upper cards */
+  .side-card {
+    max-width: none;
+  }
 }
