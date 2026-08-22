@@ -1103,7 +1103,8 @@ img, svg {
 
 .lang-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 1.25rem;
   align-items: center;
   padding-bottom: 0.75rem;
   border-bottom: 1px solid var(--border-subtle);
