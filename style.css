@@ -1084,6 +1084,8 @@ img, svg {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  height: fit-content;
+  align-self: start;
 }
 
 .side-card-title {
