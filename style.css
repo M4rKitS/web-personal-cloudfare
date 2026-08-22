@@ -507,6 +507,20 @@ img, svg {
   transition: transform var(--transition-fast);
 }
 
+.btn-submit:active {
+  transform: translateY(2px);
+}
+
+.btn-submit.is-loading {
+  opacity: 0.7;
+  pointer-events: none;
+  cursor: wait;
+}
+
+.btn-submit.is-loading .btn-icon {
+  animation: pulse 1s infinite alternate;
+}
+
 .hero-explore-btn:hover {
   transform: translateY(2px);
   color: #ffffff;

@@ -153,7 +153,14 @@ const TRANSLATIONS = {
     "form.label_message": "MESSAGE",
     "form.placeholder_msg": "Write your message here...",
     "form.btn_send": "SEND MESSAGE",
-    "form.sending": "TRANSMITTING…",
+    "form.status_sending": "SENDING...",
+    "form.status_success": "Message sent successfully. I will get back to you soon.",
+    "form.status_error": "An error occurred. Please try again or contact me directly.",
+
+    // Email Auto-Reply Variables
+    "email.reply_subject": "Message Received - M4rKitS.dev",
+    "email.reply_message": "Hello {{from_name}},\n\nThank you for reaching out regarding '{{subject}}'. I have successfully received your message and will read it as soon as possible.\n\nI typically respond within 24-48 hours.\n\nBest regards,\nMarcos Rodríguez\nhttps://m4rkits.dev",
+
     "form.err_name": "Please enter your name.",
     "form.err_email": "Please enter a valid email.",
     "form.err_msg": "Please write a message.",
@@ -318,7 +325,14 @@ const TRANSLATIONS = {
     "form.label_message": "MENSAJE",
     "form.placeholder_msg": "Escribe tu mensaje aquí...",
     "form.btn_send": "ENVIAR MENSAJE",
-    "form.sending": "ENVIANDO…",
+    "form.status_sending": "ENVIANDO...",
+    "form.status_success": "Mensaje enviado con éxito. Te responderé pronto.",
+    "form.status_error": "Ocurrió un error. Por favor, inténtalo de nuevo o contáctame directamente.",
+
+    // Email Auto-Reply Variables
+    "email.reply_subject": "Mensaje Recibido - M4rKitS.dev",
+    "email.reply_message": "Hola {{from_name}},\n\nGracias por ponerte en contacto sobre '{{subject}}'. He recibido tu mensaje correctamente y lo leeré lo antes posible.\n\nNormalmente respondo en 24-48 horas.\n\nUn saludo,\nMarcos Rodríguez\nhttps://m4rkits.dev",
+
     "form.err_name": "Por favor, introduce tu nombre.",
     "form.err_email": "Por favor, introduce un email válido.",
     "form.err_msg": "Por favor, escribe tu mensaje.",
@@ -483,7 +497,14 @@ const TRANSLATIONS = {
     "form.label_message": "VIESTI",
     "form.placeholder_msg": "Kirjoita viestisi tähän…",
     "form.btn_send": "LÄHETÄ VIESTI",
-    "form.sending": "LÄHETETÄÄN…",
+    "form.status_sending": "LÄHETETÄÄN...",
+    "form.status_success": "Viesti lähetetty onnistuneesti. Palaan asiaan pian.",
+    "form.status_error": "Tapahtui virhe. Yritä uudelleen tai ota minuun suoraan yhteyttä.",
+
+    // Email Auto-Reply Variables
+    "email.reply_subject": "Viesti Vastaanotettu - M4rKitS.dev",
+    "email.reply_message": "Hei {{from_name}},\n\nKiitos yhteydenotostasi koskien '{{subject}}'. Olen vastaanottanut viestisi onnistuneesti ja luen sen mahdollisimman pian.\n\nYleensä vastaan 24-48 tunnin kuluessa.\n\nYstävällisin terveisin,\nMarcos Rodríguez\nhttps://m4rkits.dev",
+
     "form.err_name": "Ole hyvä ja anna nimesi.",
     "form.err_email": "Ole hyvä ja anna kelvollinen sähköpostiosoite.",
     "form.err_msg": "Ole hyvä ja kirjoita viesti.",

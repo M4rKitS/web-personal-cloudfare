@@ -264,8 +264,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // --- 4. TERMINAL CONTACT FORM ---
+  if (typeof emailjs !== 'undefined') {
+    emailjs.init("d4w05JCeQd75BiH0Q");
+  }
+
   const contactForm = document.getElementById('contact-form');
   const formFeedback = document.getElementById('form-feedback');
+  const submitBtn = document.getElementById('contact-submit');
 
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -300,16 +305,55 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Build Mailto URI
-      const bodyText = `Sender: ${name} (${email})\n\nMessage:\n${message}`;
-      const mailtoUrl = `mailto:rodriguezmarcos.fi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
+      // UI Loading State
+      if (submitBtn) {
+        submitBtn.classList.add('is-loading');
+        const btnText = submitBtn.querySelector('.btn-text');
+        if (btnText) btnText.textContent = langData['form.status_sending'] || 'SENDING...';
+      }
+      showFeedback('', '');
 
-      showFeedback(langData['form.sending'] || 'Opening mail client…', 'success');
+      // Parse Multi-Language Auto-Reply
+      const replySubject = langData['email.reply_subject'] || 'Message Received - M4rKitS.dev';
+      let replyMessage = langData['email.reply_message'] || '';
+      replyMessage = replyMessage.replace(/{{from_name}}/g, name).replace(/{{subject}}/g, subject);
 
-      setTimeout(() => {
-        window.location.href = mailtoUrl;
-        showFeedback(langData['form.success'] || '✓ Client opened. Thank you!', 'success');
-      }, 500);
+      // Email 1: Notification to Owner
+      const templateParamsOwner = {
+        from_name: name,
+        from_email: email,
+        subject: subject,
+        message: message
+      };
+
+      // Email 2: Auto-reply to Sender
+      const templateParamsSender = {
+        from_name: name,
+        from_email: email,
+        subject: subject,
+        reply_subject: replySubject,
+        reply_message: replyMessage
+      };
+
+      Promise.all([
+        emailjs.send("service_utwds39", "template_9bv8r1n", templateParamsOwner),
+        emailjs.send("service_utwds39", "template_dnumxnq", templateParamsSender)
+      ])
+      .then(() => {
+        showFeedback(langData['form.status_success'] || 'Message sent successfully.', 'success');
+        contactForm.reset();
+      })
+      .catch((error) => {
+        console.error('EmailJS Error:', error);
+        showFeedback(langData['form.status_error'] || 'An error occurred.', 'error');
+      })
+      .finally(() => {
+        if (submitBtn) {
+          submitBtn.classList.remove('is-loading');
+          const btnText = submitBtn.querySelector('.btn-text');
+          if (btnText) btnText.textContent = langData['form.btn_send'] || 'SEND MESSAGE';
+        }
+      });
     });
   }
 
