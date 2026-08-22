@@ -1526,7 +1526,7 @@ img, svg {
   }
 
   .section {
-    padding: 4rem 0;
+    padding: 2.5rem 0;
   }
 
   .whatsapp-float-container {
@@ -1560,5 +1560,10 @@ img, svg {
   /* 4. Language Side Card max-width removed to match upper cards */
   .side-card {
     max-width: none;
+  }
+
+  /* 5. Timeline log gap reduction */
+  .log-entry {
+    gap: 1rem;
   }
 }
