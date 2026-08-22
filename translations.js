@@ -125,7 +125,7 @@ const TRANSLATIONS = {
     // Contact
     "contact.index": "05 // GET IN TOUCH",
     "contact.title": "LET'S BUILD SOMETHING",
-    "contact.desc": "Have a project in mind, need help with your website, or want to propose something interesting? Reach out through any of these channels.",
+    "contact.desc": "Have a project in mind, need help with your website, or want to propose something interesting? Reach out through any of these channels or leave me a message.",
     
     "contact.email_lbl": "DIRECT EMAIL",
     "contact.phone_lbl": "PHONE / WHATSAPP",
@@ -279,7 +279,7 @@ const TRANSLATIONS = {
     // Contact
     "contact.index": "05 // CONTACTAR",
     "contact.title": "¿HABLAMOS?",
-    "contact.desc": "¿Tienes un proyecto en mente, buscas ayuda con tu web, o quieres proponerme algo interesante? Escríbeme por cualquiera de estos canales.",
+    "contact.desc": "¿Tienes un proyecto en mente, buscas ayuda con tu web, o quieres proponerme algo interesante? Escríbeme por cualquiera de estos canales o déjame un mensaje.",
     
     "contact.email_lbl": "CORREO DIRECTO",
     "contact.phone_lbl": "TELÉFONO / WHATSAPP",
@@ -434,7 +434,7 @@ const TRANSLATIONS = {
     // Contact
     "contact.index": "05 // YHTEYDENOTTO",
     "contact.title": "RAKENNETAANKO JOTAIN YHDESSÄ?",
-    "contact.desc": "Onko sinulla projekti mielessä, tarvitsetko apua verkkosivustosi kanssa vai haluatko ehdottaa jotain mielenkiintoista? Ota yhteyttä alla olevien kanavien kautta.",
+    "contact.desc": "Onko sinulla projekti mielessä, tarvitsetko apua verkkosivustosi kanssa vai haluatko ehdottaa jotain mielenkiintoista? Ota yhteyttä alla olevien kanavien kautta tai jätä minulle viesti.",
     
     "contact.email_lbl": "SUORA SÄHKÖPOSTI",
     "contact.phone_lbl": "PUHELIN / WHATSAPP",
