@@ -1541,10 +1541,7 @@ img, svg {
   }
   .accordion-title {
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: inline-block;
-    max-width: 85%;
+    font-size: 0.75rem; /* Allow text and counter to fit on one line without truncation */
   }
 
   /* 2. Timeline titles: force same font-size */
