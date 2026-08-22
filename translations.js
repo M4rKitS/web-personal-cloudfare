@@ -147,7 +147,7 @@ const TRANSLATIONS = {
 
     // Email Auto-Reply Variables
     "email.reply_subject": "Message Received - M4rKitS.dev",
-    "email.reply_message": "Hello {{from_name}},\n\nThank you for reaching out regarding '{{subject}}'. I have successfully received your message and will read it as soon as possible.\n\nI typically respond within 24-48 hours.\n\nBest regards,\nMarcos Rodríguez\nhttps://m4rkits.dev",
+    "email.reply_message": "Hello {{from_name}},\n\nThank you for reaching out regarding '{{subject}}'. I have successfully received your message and will read it as soon as possible.\n\nI typically respond within 24-48 hours.\n\nBest regards,\nMarcos Rodríguez\nhttps://m4rkits.pages.dev/",
 
     "form.err_name": "Please enter your name.",
     "form.err_email": "Please enter a valid email.",
@@ -301,7 +301,7 @@ const TRANSLATIONS = {
 
     // Email Auto-Reply Variables
     "email.reply_subject": "Mensaje Recibido - M4rKitS.dev",
-    "email.reply_message": "Hola {{from_name}},\n\nGracias por ponerte en contacto sobre '{{subject}}'. He recibido tu mensaje correctamente y lo leeré lo antes posible.\n\nNormalmente respondo en 24-48 horas.\n\nUn saludo,\nMarcos Rodríguez\nhttps://m4rkits.dev",
+    "email.reply_message": "Hola {{from_name}},\n\nGracias por ponerte en contacto sobre '{{subject}}'. He recibido tu mensaje correctamente y lo leeré lo antes posible.\n\nNormalmente respondo en 24-48 horas.\n\nUn saludo,\nMarcos Rodríguez\nhttps://m4rkits.pages.dev/",
 
     "form.err_name": "Por favor, introduce tu nombre.",
     "form.err_email": "Por favor, introduce un email válido.",
@@ -456,7 +456,7 @@ const TRANSLATIONS = {
 
     // Email Auto-Reply Variables
     "email.reply_subject": "Viesti Vastaanotettu - M4rKitS.dev",
-    "email.reply_message": "Hei {{from_name}},\n\nKiitos yhteydenotostasi koskien '{{subject}}'. Olen vastaanottanut viestisi onnistuneesti ja luen sen mahdollisimman pian.\n\nYleensä vastaan 24-48 tunnin kuluessa.\n\nYstävällisin terveisin,\nMarcos Rodríguez\nhttps://m4rkits.dev",
+    "email.reply_message": "Hei {{from_name}},\n\nKiitos yhteydenotostasi koskien '{{subject}}'. Olen vastaanottanut viestisi onnistuneesti ja luen sen mahdollisimman pian.\n\nYleensä vastaan 24-48 tunnin kuluessa.\n\nYstävällisin terveisin,\nMarcos Rodríguez\nhttps://m4rkits.pages.dev/",
 
     "form.err_name": "Ole hyvä ja anna nimesi.",
     "form.err_email": "Ole hyvä ja anna kelvollinen sähköpostiosoite.",
