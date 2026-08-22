@@ -1093,7 +1093,6 @@ img, svg {
   gap: 1.5rem;
   height: fit-content;
   align-self: start;
-  max-width: 320px;
   width: 100%;
 }
 
