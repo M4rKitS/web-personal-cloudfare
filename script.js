@@ -290,17 +290,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Validation
       if (!name) {
-        showFeedback(langData['form.err_name'] || 'Please enter your name.', 'error');
+        showFeedback('form.err_name', 'error');
         nameInput.focus();
         return;
       }
       if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        showFeedback(langData['form.err_email'] || 'Please enter a valid email address.', 'error');
+        showFeedback('form.err_email', 'error');
         emailInput.focus();
         return;
       }
       if (!message) {
-        showFeedback(langData['form.err_msg'] || 'Please write a message.', 'error');
+        showFeedback('form.err_msg', 'error');
         messageInput.focus();
         return;
       }
@@ -309,7 +309,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (submitBtn) {
         submitBtn.classList.add('is-loading');
         const btnText = submitBtn.querySelector('.btn-text');
-        if (btnText) btnText.textContent = langData['form.status_sending'] || 'SENDING...';
+        if (btnText) {
+          btnText.setAttribute('data-i18n', 'form.status_sending');
+          btnText.textContent = langData['form.status_sending'] || 'SENDING...';
+        }
       }
       showFeedback('', '');
 
@@ -340,26 +343,36 @@ document.addEventListener('DOMContentLoaded', () => {
         emailjs.send("service_utwds39", "template_dnumxnq", templateParamsSender)
       ])
       .then(() => {
-        showFeedback(langData['form.status_success'] || 'Message sent successfully.', 'success');
+        showFeedback('form.status_success', 'success');
         contactForm.reset();
       })
       .catch((error) => {
         console.error('EmailJS Error:', error);
-        showFeedback(langData['form.status_error'] || 'An error occurred.', 'error');
+        showFeedback('form.status_error', 'error');
       })
       .finally(() => {
         if (submitBtn) {
           submitBtn.classList.remove('is-loading');
           const btnText = submitBtn.querySelector('.btn-text');
-          if (btnText) btnText.textContent = langData['form.btn_send'] || 'SEND MESSAGE';
+          if (btnText) {
+            btnText.setAttribute('data-i18n', 'form.btn_send');
+            btnText.textContent = langData['form.btn_send'] || 'SEND MESSAGE';
+          }
         }
       });
     });
   }
 
-  function showFeedback(text, type) {
+  function showFeedback(i18nKey, type) {
     if (!formFeedback) return;
-    formFeedback.textContent = text;
+    if (i18nKey) {
+      formFeedback.setAttribute('data-i18n', i18nKey);
+      const langData = TRANSLATIONS[currentLang] || TRANSLATIONS['es'];
+      formFeedback.textContent = langData[i18nKey] || '';
+    } else {
+      formFeedback.removeAttribute('data-i18n');
+      formFeedback.textContent = '';
+    }
     formFeedback.className = 'form-feedback ' + type;
   }
 
