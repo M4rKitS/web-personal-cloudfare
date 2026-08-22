@@ -1363,92 +1363,6 @@ img, svg {
   transform: translateY(-50%) translateX(-4px);
 }
 
-/* --- COOKIE CONSENT BANNER --- */
-.cookie-banner {
-  position: fixed;
-  bottom: 2rem;
-  left: 2rem;
-  max-width: 420px;
-  background: rgba(13, 13, 13, 0.94);
-  backdrop-filter: blur(16px);
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-md);
-  padding: 1.5rem;
-  z-index: 1100;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
-  transform: translateY(120%);
-  opacity: 0;
-  transition: all var(--transition-slow);
-}
-
-.cookie-banner.visible {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.cookie-header {
-  margin-bottom: 0.5rem;
-}
-
-.cookie-tag {
-  font-family: var(--font-mono);
-  font-size: 0.625rem;
-  color: var(--text-muted);
-  letter-spacing: 0.08em;
-}
-
-.cookie-header h4 {
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  color: var(--text-primary);
-  margin-top: 2px;
-}
-
-.cookie-content p {
-  font-size: 0.8125rem;
-  color: var(--text-secondary);
-  line-height: 1.5;
-  margin-bottom: 1.25rem;
-}
-
-.cookie-actions {
-  display: flex;
-  gap: 0.75rem;
-}
-
-.btn-cookie-accept {
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  font-weight: 700;
-  padding: 8px 14px;
-  background: #ffffff;
-  color: #050505;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  transition: all var(--transition-fast);
-}
-
-.btn-cookie-accept:hover {
-  background: #e4e4e7;
-}
-
-.btn-cookie-decline {
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  font-weight: 500;
-  padding: 8px 14px;
-  background: transparent;
-  color: var(--text-muted);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  transition: all var(--transition-fast);
-}
-
-.btn-cookie-decline:hover {
-  color: var(--text-primary);
-  border-color: var(--border-medium);
-}
 
 /* --- SITE FOOTER --- */
 .site-footer {
@@ -1581,13 +1495,6 @@ img, svg {
 
   .section {
     padding: 4rem 0;
-  }
-
-  .cookie-banner {
-    left: 1rem;
-    right: 1rem;
-    bottom: 1rem;
-    max-width: none;
   }
 
   .whatsapp-float-container {

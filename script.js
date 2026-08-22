@@ -390,33 +390,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // --- 5. COOKIE CONSENT BANNER ---
-  const cookieBanner = document.getElementById('cookie-banner');
-  const cookieAccept = document.getElementById('cookie-accept');
-  const cookieDecline = document.getElementById('cookie-decline');
-
-  const cookieConsent = localStorage.getItem('cookie_consent');
-
-  if (!cookieConsent && cookieBanner) {
-    setTimeout(() => {
-      cookieBanner.classList.add('visible');
-    }, 1400);
-  }
-
-  if (cookieAccept) {
-    cookieAccept.addEventListener('click', () => {
-      localStorage.setItem('cookie_consent', 'accepted');
-      if (cookieBanner) cookieBanner.classList.remove('visible');
-    });
-  }
-
-  if (cookieDecline) {
-    cookieDecline.addEventListener('click', () => {
-      localStorage.setItem('cookie_consent', 'declined');
-      if (cookieBanner) cookieBanner.classList.remove('visible');
-    });
-  }
-
 
   // --- 6. NAVBAR SCROLL & ACTIVE SECTION HIGHLIGHT ---
   const header = document.getElementById('header');

@@ -169,12 +169,6 @@ const TRANSLATIONS = {
     // WhatsApp Floating Button
     "whatsapp.tooltip": "Chat on WhatsApp (Draggable)",
 
-    // Cookie Banner
-    "cookie.tag": "[PRIVACY & PREFERENCES]",
-    "cookie.title": "COOKIE PREFERENCES",
-    "cookie.text": "This website uses essential technical cookies and local storage to save your language preferences, optimize performance, and ensure a secure, seamless browsing experience.",
-    "cookie.accept": "ACCEPT & PROCEED",
-    "cookie.decline": "DECLINE",
 
     // Footer
     "footer.tagline": "Building my future. // Vantaa, Finland.",
@@ -341,12 +335,6 @@ const TRANSLATIONS = {
     // WhatsApp Floating Button
     "whatsapp.tooltip": "Contactar por WhatsApp (Arrastrable)",
 
-    // Cookie Banner
-    "cookie.tag": "[PRIVACIDAD Y PREFERENCIAS]",
-    "cookie.title": "PREFERENCIAS DE COOKIES",
-    "cookie.text": "Este sitio web utiliza cookies técnicas y almacenamiento esencial para guardar tus preferencias de idioma, optimizar la experiencia de navegación y garantizar un rendimiento seguro y fluido.",
-    "cookie.accept": "ACEPTAR Y CONTINUAR",
-    "cookie.decline": "RECHAZAR",
 
     // Footer
     "footer.tagline": "Construyendo mi futuro. // Vantaa, Finlandia.",
@@ -513,12 +501,6 @@ const TRANSLATIONS = {
     // WhatsApp Floating Button
     "whatsapp.tooltip": "Keskustele WhatsAppissa (Vedettävä)",
 
-    // Cookie Banner
-    "cookie.tag": "[YKSITYISYYS JA ASETUKSET]",
-    "cookie.title": "EVÄSTEVALINNAT",
-    "cookie.text": "Tämä verkkosivusto käyttää välttämättömiä teknisiä evästeitä ja paikallista tallennustilaa kielivalintojen muistamiseen, suorituskyvyn optimointiin ja sujuvaan selauskokemukseen.",
-    "cookie.accept": "HYVÄKSY JA JATKA",
-    "cookie.decline": "HYLKÄÄ",
 
     // Footer
     "footer.tagline": "Rakentamassa tulevaisuuttani. // Vantaa, Suomi.",
