@@ -206,6 +206,13 @@ img, svg {
   letter-spacing: 0.08em;
   display: flex;
   align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.nav-brand:hover {
+  opacity: 0.8;
 }
 
 .brand-text {
