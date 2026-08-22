@@ -1086,6 +1086,8 @@ img, svg {
   gap: 1.5rem;
   height: fit-content;
   align-self: start;
+  max-width: 320px;
+  width: 100%;
 }
 
 .side-card-title {
@@ -1103,8 +1105,7 @@ img, svg {
 
 .lang-row {
   display: flex;
-  justify-content: flex-start;
-  gap: 1.25rem;
+  justify-content: space-between;
   align-items: center;
   padding-bottom: 0.75rem;
   border-bottom: 1px solid var(--border-subtle);
