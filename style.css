@@ -1497,9 +1497,12 @@ img, svg {
     top: var(--header-height);
     left: 0;
     width: 100%;
+    height: calc(100vh - var(--header-height));
+    overflow-y: auto;
+    z-index: 999;
     background: #050505;
     border-bottom: 1px solid var(--border-medium);
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.5rem 4rem 1.5rem; /* added extra bottom padding for scrolling */
     transform: translateY(-120%);
     opacity: 0;
     pointer-events: none;
