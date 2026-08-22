@@ -80,20 +80,8 @@ const TRANSLATIONS = {
     "exp.company1": "ConquerBlocks Academy",
     "exp.desc1": "Comprehensive software engineering program focused on modern web fundamentals, development workflows, algorithms, and practical applications.",
 
-    "exp.date2": "May 2019 — Sep 2025",
-    "exp.title2": "Commercial Agent & Logistics Coordinator",
-    "exp.company2": "Grupo Síndel, S.A.",
-    "exp.desc2": "Coordinated logistics operations, managed inventory tracking systems, and streamlined client account communications with high reliability.",
-
-    "exp.date3": "Aug 2017 — May 2019",
-    "exp.title3": "Logistics & Distribution Specialist",
-    "exp.company3": "Grupo Síndel, S.A.",
-    "exp.desc3": "Executed regional route optimization, fleet scheduling, and time-critical delivery logistics.",
-
     "exp.date4": "Sep 2014 — Jun 2016",
     "exp.title4": "Higher Vocational Diploma — IT Systems & Networks",
-    "exp.company4": "Instituto Navarro Santafé",
-    "exp.desc4": "Technical academic training covering computer hardware, server administration, network topologies, and systems maintenance.",
 
     "exp.certs_title": "CERTIFICATIONS & CREDENTIALS",
     "certs.verified_tag": "[VERIFIED CREDENTIALS & TRAINING]",
@@ -121,7 +109,7 @@ const TRANSLATIONS = {
     "about.index": "04 // ABOUT ME",
     "about.title": "BACKGROUND & MISSION",
     "about.lead": "Technologist transitioning into software engineering — bringing 8+ years of operational discipline into web development.",
-    "about.body": "Living in Vantaa (Finland), I am currently dedicating my full focus to the Full Stack Master at ConquerBlocks. My professional background in logistics, combined with my early training in IT systems, gives me a unique problem-solving mindset: structured, efficient, and resilient.",
+    "about.body": "Before dedicating myself to web development, I built an 8-year career at Grupo Síndel in Spain, progressing from logistics operations to managing my own client portfolio — while also handling warehouse tasks and covering any front the team needed. That journey taught me the essentials: listening to the real problems of each client and solving them with speed and good judgment. The relationships I built back then are still alive today, even from over 3,000 kilometers away — trust, when well earned, doesn't expire. Today, I apply that same mindset to every web project: understanding what your business truly needs, and building something that keeps working for you long after delivery.",
     "about.stat_tech": "Technical Training",
     "about.stat_exp": "Logistics & Operations",
     "about.stat_focus": "Master Full Stack",
@@ -246,20 +234,8 @@ const TRANSLATIONS = {
     "exp.company1": "ConquerBlocks Academy",
     "exp.desc1": "Programa intensivo de ingeniería de software enfocado en tecnologías web modernas, programación práctica y arquitectura de aplicaciones.",
 
-    "exp.date2": "May 2019 — Sep 2025",
-    "exp.title2": "Agente Comercial y Coordinador Logístico",
-    "exp.company2": "Grupo Síndel, S.A.",
-    "exp.desc2": "Coordinación de operaciones logísticas, gestión de sistemas digitales de inventario y optimización de flujos de distribución.",
-
-    "exp.date3": "Ago 2017 — May 2019",
-    "exp.title3": "Operador de Logística y Rutas",
-    "exp.company3": "Grupo Síndel, S.A.",
-    "exp.desc3": "Planificación y ejecución de rutas logísticas regionales con foco en eficiencia de tiempos y cumplimiento de estándares.",
-
     "exp.date4": "Sep 2014 — Jun 2016",
     "exp.title4": "Técnico Superior en Sistemas Microinformáticos y Redes",
-    "exp.company4": "Instituto Navarro Santafé",
-    "exp.desc4": "Formación técnica académica en hardware, servidores, topología de redes, cableado estructurado y mantenimiento informático.",
 
     "exp.certs_title": "CERTIFICACIONES Y CREDENCIALES",
     "certs.verified_tag": "[CREDENCIALES Y FORMACIÓN]",
@@ -287,7 +263,7 @@ const TRANSLATIONS = {
     "about.index": "04 // SOBRE MÍ",
     "about.title": "PERFIL Y OBJETIVOS",
     "about.lead": "Entusiasta de la tecnología en transición hacia la ingeniería de software — con más de 8 años de disciplina operativa.",
-    "about.body": "Residiendo en Vantaa (Finlandia), estoy dedicado al 100% al Máster Full Stack en ConquerBlocks. Mi trayectoria profesional en logística, combinada con mi base técnica en sistemas informáticos, me aporta una visión orientada a la resolución metódica y eficaz de problemas.",
+    "about.body": "Antes de dedicarme al desarrollo web, construí 8 años de trayectoria en España, progresando desde operaciones logísticas hasta la gestión comercial de una cartera de clientes propia — con paso también por tareas de almacén, cubriendo cualquier frente que el equipo necesitara. Ese recorrido me enseñó lo esencial: escuchar el problema real de cada cliente y resolverlo con rapidez y criterio. Las relaciones que construí entonces siguen vivas hoy, incluso a más de 3.000 kilómetros de distancia — la confianza, cuando se gana bien, no caduca. Hoy aplico esa misma mentalidad a cada proyecto web: entender lo que tu negocio necesita de verdad, y construir algo que siga funcionando para ti mucho después de la entrega.",
     "about.stat_tech": "Formación técnica",
     "about.stat_exp": "Años en Logística y Ops",
     "about.stat_focus": "Máster Full Stack",
@@ -412,20 +388,9 @@ const TRANSLATIONS = {
     "exp.company1": "ConquerBlocks Academy",
     "exp.desc1": "Kattava ohjelmistokehitysohjelma, joka keskittyy moderneihin verkkoteknologioihin, käytännön koodaukseen ja sovellusarkkitehtuuriin.",
 
-    "exp.date2": "Touko 2019 — Syys 2025",
-    "exp.title2": "Myyntiedustaja & Logistiikkakoordinaattori",
-    "exp.company2": "Grupo Síndel, S.A.",
-    "exp.desc2": "Logistiikkatoimintojen koordinointi, digitaalisten varastojärjestelmien hallinta ja toimitusketjujen tehostaminen korkealla toimitusvarmuudella.",
-
-    "exp.date3": "Elo 2017 — Touko 2019",
-    "exp.title3": "Logistiikan ja jakelun asiantuntija",
-    "exp.company3": "Grupo Síndel, S.A.",
-    "exp.desc3": "Alueellisten toimitusreittien optimointi, kaluston aikataulutus ja täsmällinen toimituslogistiikka.",
-
     "exp.date4": "Syys 2014 — Kesä 2016",
     "exp.title4": "Tieto- ja viestintätekniikan erikoisammattitutkinto",
     "exp.company4": "Instituto Navarro Santafé",
-    "exp.desc4": "Tietokonelaitteistojen, palvelimien, verkkotopologioiden, kaapeloinnin ja järjestelmäylläpidon tekninen tutkinto.",
 
     "exp.certs_title": "SERTIFIKAATIT JA PÄTEVYYDET",
     "certs.verified_tag": "[VAHVISTETUT PÄTEVYYDET]",
@@ -453,7 +418,7 @@ const TRANSLATIONS = {
     "about.index": "04 // TIETOA MINUSTA",
     "about.title": "TAUSTA JA TAVOITTEET",
     "about.lead": "Teknologia-intoilija siirtymässä ohjelmistokehitykseen — tuomassa yli 8 vuoden operatiivisen kurinalaisuuden verkkokehityksen maailmaan.",
-    "about.body": "Asun Vantaalla ja keskityn tällä hetkellä täysipäiväisesti ConquerBlocksin Full Stack Master -opintoihin. Ammatillinen taustani logistiikassa, yhdistettynä IT-järjestelmien koulutukseen, antaa minulle vahvan ja ratkaisukeskeisen ajattelutavan.",
+    "about.body": "Ennen siirtymistäni verkkokehityksen pariin, tein 8 vuoden uran. Etenin logistiikkatehtävistä oman asiakassalkkuni myyntipäälliköksi — samalla kun hoidin varastotehtäviä ja tuurasin siellä, missä tiimi kulloinkin tarvitsi apua. Tämä matka opetti minulle olennaisen: asiakkaan todellisen ongelman kuuntelemisen sekä sen ratkaisemisen nopeasti ja harkitusti. Tuolloin luodut suhteet ovat edelleen elossa tänäkin päivänä, jopa yli 3 000 kilometrin päästä — oikein ansaittu luottamus ei vanhene. Nykyään sovellan samaa ajattelutapaa jokaiseen verkkoprojektiin: ymmärrän mitä yrityksesi todella tarvitsee ja rakennan jotain, joka palvelee sinua vielä pitkään luovutuksen jälkeenkin.",
     "about.stat_tech": "Tekninen koulutus",
     "about.stat_exp": "Vuotta logistiikassa",
     "about.stat_focus": "Master Full Stack",
