@@ -1083,6 +1083,10 @@ img, svg {
   white-space: nowrap;
 }
 
+.about-side-area {
+  align-self: start;
+}
+
 .side-card {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
@@ -1092,7 +1096,6 @@ img, svg {
   flex-direction: column;
   gap: 1.5rem;
   height: fit-content;
-  align-self: start;
   width: 100%;
 }
 
