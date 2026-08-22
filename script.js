@@ -67,6 +67,25 @@ document.addEventListener('DOMContentLoaded', () => {
   // Apply initial language
   applyLanguage(currentLang);
 
+  // --- 1.5 ACCORDION ENGINE ---
+  document.querySelectorAll('.certs-accordion').forEach(accordion => {
+    const btn = accordion.querySelector('.certs-accordion-btn');
+    const countSpan = accordion.querySelector('.accordion-count');
+    const cards = accordion.querySelectorAll('.cert-card');
+    
+    // Dynamic Count
+    if (countSpan && cards) {
+      countSpan.textContent = `(${cards.length})`;
+    }
+
+    if (btn) {
+      btn.addEventListener('click', () => {
+        const isOpen = accordion.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', isOpen);
+      });
+    }
+  });
+
 
   // --- 2. 3D TOPOGRAPHIC PARTICLE WAVE CANVAS ENGINE ---
   const canvas = document.getElementById('particle-canvas');

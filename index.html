@@ -350,8 +350,18 @@
             <h3 class="certs-title" data-i18n="exp.certs_title">CERTIFICACIONES Y CREDENCIALES</h3>
           </div>
           
-          <h3 class="certs-subsection-title" data-i18n="certs.external_title">CERTIFICACIONES OFICIALES</h3>
-          <div class="certs-grid-cards">
+          <div class="certs-accordion">
+            <button class="certs-accordion-btn" aria-expanded="false">
+              <span class="accordion-title">
+                <span data-i18n="certs.external_title">CERTIFICACIONES OFICIALES</span> <span class="accordion-count"></span>
+              </span>
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="certs-accordion-content">
+              <div class="certs-accordion-inner">
+                <div class="certs-grid-cards">
             <!-- Cert 1: AWS -->
             <div class="cert-card">
               <div class="cert-card-top">
@@ -399,10 +409,23 @@
                 <p class="cert-card-org" data-i18n="certs.vibe_org">Big School</p>
               </div>
             </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <h3 class="certs-subsection-title" data-i18n="certs.modules_title">CERTIFICACIONES CONQUERBLOCKS</h3>
-          <div class="certs-grid-cards">
+          <div class="certs-accordion">
+            <button class="certs-accordion-btn" aria-expanded="false">
+              <span class="accordion-title">
+                <span data-i18n="certs.modules_title">CERTIFICACIONES CONQUERBLOCKS</span> <span class="accordion-count"></span>
+              </span>
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="certs-accordion-content">
+              <div class="certs-accordion-inner">
+                <div class="certs-grid-cards">
             <!-- Cert 5: Python (Moved here) -->
             <div class="cert-card">
               <div class="cert-card-top">
@@ -436,6 +459,9 @@
               <div class="cert-card-body">
                 <h4 class="cert-card-title" data-i18n="certs.linux">Linux y la Terminal</h4>
                 <p class="cert-card-org" data-i18n="certs.linux_org">ConquerBlocks Academy · Feb 2025</p>
+              </div>
+            </div>
+          </div>
               </div>
             </div>
           </div>
