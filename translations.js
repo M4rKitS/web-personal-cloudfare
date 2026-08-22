@@ -159,7 +159,7 @@ const TRANSLATIONS = {
 
 
     // Footer
-    "footer.tagline": "Building my future. // Vantaa, Finland.",
+    "footer.tagline": "Building the web your business needs. // Vantaa, Finland.",
     "footer.copy": "Marcos Rodríguez Hernández. All rights reserved."
   },
 
@@ -313,7 +313,7 @@ const TRANSLATIONS = {
 
 
     // Footer
-    "footer.tagline": "Construyendo mi futuro. // Vantaa, Finlandia.",
+    "footer.tagline": "Construyendo la web que tu negocio necesita. // Vantaa, Finlandia.",
     "footer.copy": "Marcos Rodríguez Hernández. Todos los derechos reservados."
   },
 
@@ -468,7 +468,7 @@ const TRANSLATIONS = {
 
 
     // Footer
-    "footer.tagline": "Rakentamassa tulevaisuuttani. // Vantaa, Suomi.",
+    "footer.tagline": "Rakennan yrityksesi tarvitsemat verkkoratkaisut. // Vantaa, Suomi.",
     "footer.copy": "Marcos Rodríguez Hernández. Kaikki oikeudet pidätetään."
   }
 };
