@@ -1535,7 +1535,7 @@ img, svg {
   }
 
   /* BUG FIXES (Mobile Only) */
-  /* 1. Certifications Accordion: align left, no wrap */
+  /* 1. Certifications Accordion: align left, no wrap, prevent icon squish */
   .certs-accordion-btn {
     text-align: left;
   }
@@ -1543,23 +1543,35 @@ img, svg {
     white-space: nowrap;
     font-size: 0.75rem; /* Allow text and counter to fit on one line without truncation */
   }
-
-  /* 2. Timeline titles: force same font-size */
-  .log-title {
-    font-size: 1.125rem !important; /* Forces all titles to exactly match the global defined size even if inherited otherwise */
+  .accordion-icon {
+    flex-shrink: 0;
   }
 
-  /* 3. Stack Card hover active state (white line) disabled on mobile */
+  /* 2. Timeline titles: force same font-size, use clamp to avoid 4 lines */
+  .log-title {
+    font-size: clamp(0.95rem, 4.5vw, 1.125rem) !important;
+  }
+
+  /* 3. Certifications Cards badge overflow */
+  .cert-card {
+    box-sizing: border-box;
+    padding: 1.25rem 1rem;
+  }
+  .cert-card-top {
+    gap: 0.5rem;
+  }
+
+  /* 4. Stack Card hover active state (white line) disabled on mobile */
   .stack-card:hover::before {
     background: transparent !important;
   }
 
-  /* 4. Language Side Card max-width removed to match upper cards */
+  /* 5. Language Side Card max-width removed to match upper cards */
   .side-card {
     max-width: none;
   }
 
-  /* 5. Timeline log gap reduction */
+  /* 6. Timeline log gap reduction */
   .log-entry {
     gap: 1rem;
   }
