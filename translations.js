@@ -81,7 +81,7 @@ const TRANSLATIONS = {
     "exp.desc1": "Comprehensive software engineering program focused on modern web fundamentals, development workflows, algorithms, and practical applications.",
 
     "exp.date4": "Sep 2014 — Jun 2016",
-    "exp.title4": "Higher Vocational Diploma — IT Systems & Networks",
+    "exp.title4": "Vocational Diploma — IT Systems & Networks",
 
     "exp.certs_title": "CERTIFICATIONS & CREDENTIALS",
     "certs.verified_tag": "[VERIFIED CREDENTIALS & TRAINING]",
@@ -235,7 +235,7 @@ const TRANSLATIONS = {
     "exp.desc1": "Programa intensivo de ingeniería de software enfocado en tecnologías web modernas, programación práctica y arquitectura de aplicaciones.",
 
     "exp.date4": "Sep 2014 — Jun 2016",
-    "exp.title4": "Técnico Superior en Sistemas Microinformáticos y Redes",
+    "exp.title4": "Técnico en Sistemas Microinformáticos y Redes",
 
     "exp.certs_title": "CERTIFICACIONES Y CREDENCIALES",
     "certs.verified_tag": "[CREDENCIALES Y FORMACIÓN]",
@@ -389,7 +389,7 @@ const TRANSLATIONS = {
     "exp.desc1": "Kattava ohjelmistokehitysohjelma, joka keskittyy moderneihin verkkoteknologioihin, käytännön koodaukseen ja sovellusarkkitehtuuriin.",
 
     "exp.date4": "Syys 2014 — Kesä 2016",
-    "exp.title4": "Tieto- ja viestintätekniikan erikoisammattitutkinto",
+    "exp.title4": "Tieto- ja viestintätekniikan ammattitutkinto",
     "exp.company4": "Instituto Navarro Santafé",
 
     "exp.certs_title": "SERTIFIKAATIT JA PÄTEVYYDET",
