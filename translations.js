@@ -7,7 +7,7 @@ const TRANSLATIONS = {
   en: {
     // Page Meta
     "meta.title": "M4rKitS.dev | Web Developer",
-    "meta.description": "Marcos Rodríguez Hernández — Aspiring Full Stack Developer (ConquerBlocks Master), IT Systems Technician & 8+ Years Operations Professional based in Vantaa, Finland.",
+    "meta.description": "Marcos Rodríguez Hernández — Aspiring Full Stack Developer (ConquerBlocks Master), IT Systems Technician & 8+ Years Operations Professional living in Finland.",
 
     // Navbar
     "nav.brand": "M4rKitS.dev",
@@ -24,7 +24,7 @@ const TRANSLATIONS = {
     "hero.role": "Marcos Rodríguez <br /> Full Stack Developer — modern and agile web development, powered by AI tools, for small businesses and entrepreneurs looking to stand out online.",
     "hero.tagline": "// I build the web your business needs.",
     "hero.explore": "EXPLORE MY WORK ↓",
-    "hero.bio": "+8 years of professional experience in IT systems and operations, now applied to web development. Based in Vantaa, Finland.",
+    "hero.bio": "+8 years of professional experience in IT systems and operations, now applied to web development. Living in Finland.",
     "hero.btn_contact": "INITIATE CONTACT →",
 
     // Projects & Technologies
@@ -159,14 +159,14 @@ const TRANSLATIONS = {
 
 
     // Footer
-    "footer.tagline": "Building the web your business needs. // Vantaa, Finland.",
+    "footer.tagline": "Building the web your business needs. // Finland.",
     "footer.copy": "Marcos Rodríguez Hernández. All rights reserved."
   },
 
   es: {
     // Page Meta
     "meta.title": "M4rKitS.dev | Web Developer",
-    "meta.description": "Marcos Rodríguez Hernández — Estudiante del Máster Full Stack (ConquerBlocks), Técnico en Sistemas Microinformáticos y +8 años en Operaciones. Vantaa, Finlandia.",
+    "meta.description": "Marcos Rodríguez Hernández — Estudiante del Máster Full Stack (ConquerBlocks), Técnico en Sistemas Microinformáticos y +8 años en Operaciones. Finlandia.",
 
     // Navbar
     "nav.brand": "M4rKitS.dev",
@@ -183,7 +183,7 @@ const TRANSLATIONS = {
     "hero.role": "Marcos Rodríguez <br /> Full Stack Developer — desarrollo web moderno y ágil, potenciado por herramientas de IA, para pequeños negocios y emprendedores que quieren destacar online.",
     "hero.tagline": "// Construyo la web que tu negocio necesita.",
     "hero.explore": "EXPLORAR MI TRABAJO ↓",
-    "hero.bio": "+8 años de experiencia profesional en sistemas y operaciones, ahora aplicados al desarrollo web. Basado en Vantaa, Finlandia.",
+    "hero.bio": "+8 años de experiencia profesional en sistemas y operaciones, ahora aplicados al desarrollo web. Residiendo en Finlandia.",
     "hero.btn_contact": "INICIAR CONTACTO →",
 
     // Projects & Technologies
@@ -313,14 +313,14 @@ const TRANSLATIONS = {
 
 
     // Footer
-    "footer.tagline": "Construyendo la web que tu negocio necesita. // Vantaa, Finlandia.",
+    "footer.tagline": "Construyendo la web que tu negocio necesita. // Finlandia.",
     "footer.copy": "Marcos Rodríguez Hernández. Todos los derechos reservados."
   },
 
   fi: {
     // Page Meta
     "meta.title": "M4rKitS.dev | Web Developer",
-    "meta.description": "Marcos Rodríguez Hernández — Full Stack -kehittäjäopiskelija (ConquerBlocks Master), IT-järjestelmäteknikko & logistiikan ammattilainen. Vantaa, Suomi.",
+    "meta.description": "Marcos Rodríguez Hernández — Full Stack -kehittäjäopiskelija (ConquerBlocks Master), IT-järjestelmäteknikko & logistiikan ammattilainen. Suomi.",
 
     // Navbar
     "nav.brand": "M4rKitS.dev",
@@ -337,7 +337,7 @@ const TRANSLATIONS = {
     "hero.role": "Marcos Rodríguez <br /> Full Stack -kehittäjä — modernia ja ketterää verkkokehitystä, tekoälytyökalujen tehostamana, pienyrityksille ja yrittäjille, jotka haluavat erottua verkossa.",
     "hero.tagline": "// Rakennan verkon, jota yrityksesi tarvitsee.",
     "hero.explore": "TUTUSTU TÖIHINI ↓",
-    "hero.bio": "Yli 8 vuoden ammattikokemus IT-järjestelmistä ja operaatioista, nyt sovellettuna verkkokehitykseen. Asuinpaikka Vantaa, Suomi.",
+    "hero.bio": "Yli 8 vuoden ammattikokemus IT-järjestelmistä ja operaatioista, nyt sovellettuna verkkokehitykseen. Asuinpaikka Suomi.",
     "hero.btn_contact": "OTA YHTEYTTÄ →",
 
     // Projects & Technologies
@@ -468,7 +468,7 @@ const TRANSLATIONS = {
 
 
     // Footer
-    "footer.tagline": "Rakennan yrityksesi tarvitsemat verkkoratkaisut. // Vantaa, Suomi.",
+    "footer.tagline": "Rakennan yrityksesi tarvitsemat verkkoratkaisut. // Suomi.",
     "footer.copy": "Marcos Rodríguez Hernández. Kaikki oikeudet pidätetään."
   }
 };
