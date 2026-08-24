@@ -1393,11 +1393,12 @@ img, svg {
 
 .footer-top {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  text-align: center;
   padding-bottom: 2.5rem;
   border-bottom: 1px solid var(--border-subtle);
-  flex-wrap: wrap;
   gap: 1.5rem;
 }
 

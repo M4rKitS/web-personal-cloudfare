@@ -159,7 +159,7 @@ const TRANSLATIONS = {
 
 
     // Footer
-    "footer.tagline": "Building the web your business needs. // Finland.",
+    "footer.tagline": "Building the web your business needs.",
     "footer.copy": "Marcos Rodríguez Hernández. All rights reserved."
   },
 
@@ -313,7 +313,7 @@ const TRANSLATIONS = {
 
 
     // Footer
-    "footer.tagline": "Construyendo la web que tu negocio necesita. // Finlandia.",
+    "footer.tagline": "Construyendo la web que tu negocio necesita.",
     "footer.copy": "Marcos Rodríguez Hernández. Todos los derechos reservados."
   },
 
@@ -468,7 +468,7 @@ const TRANSLATIONS = {
 
 
     // Footer
-    "footer.tagline": "Rakennan yrityksesi tarvitsemat verkkoratkaisut. // Suomi.",
+    "footer.tagline": "Rakennan yrityksesi tarvitsemat verkkoratkaisut.",
     "footer.copy": "Marcos Rodríguez Hernández. Kaikki oikeudet pidätetään."
   }
 };
