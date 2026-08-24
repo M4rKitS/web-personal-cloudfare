@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
   // --- 1. LANGUAGE / I18N ENGINE ---
-  let currentLang = localStorage.getItem('site_lang') || 'es';
+  let currentLang = localStorage.getItem('site_lang') || 'en';
 
   function applyLanguage(lang) {
-    if (!TRANSLATIONS[lang]) lang = 'es';
+    if (!TRANSLATIONS[lang]) lang = 'en';
     currentLang = lang;
     localStorage.setItem('site_lang', lang);
     document.documentElement.lang = lang;
@@ -299,7 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const subject = subjectInput.value.trim() || 'Portfolio Contact from ' + name;
       const message = messageInput.value.trim();
 
-      const langData = TRANSLATIONS[currentLang] || TRANSLATIONS['es'];
+      const langData = TRANSLATIONS[currentLang] || TRANSLATIONS['en'];
 
       // Validation
       if (!name) {
@@ -380,7 +380,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!formFeedback) return;
     if (i18nKey) {
       formFeedback.setAttribute('data-i18n', i18nKey);
-      const langData = TRANSLATIONS[currentLang] || TRANSLATIONS['es'];
+      const langData = TRANSLATIONS[currentLang] || TRANSLATIONS['en'];
       formFeedback.textContent = langData[i18nKey] || '';
     } else {
       formFeedback.removeAttribute('data-i18n');
