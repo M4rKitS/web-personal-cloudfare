@@ -160,7 +160,7 @@ const TRANSLATIONS = {
 
     // Footer
     "footer.tagline": "Building the web your business needs.",
-    "footer.copy": "M4rKitS.dev. All rights reserved."
+    "footer.copy": "M4rKitS.dev | All rights reserved."
   },
 
   es: {
@@ -314,7 +314,7 @@ const TRANSLATIONS = {
 
     // Footer
     "footer.tagline": "Construyendo la web que tu negocio necesita.",
-    "footer.copy": "M4rKitS.dev. Todos los derechos reservados."
+    "footer.copy": "M4rKitS.dev | Todos los derechos reservados."
   },
 
   fi: {
@@ -469,6 +469,6 @@ const TRANSLATIONS = {
 
     // Footer
     "footer.tagline": "Rakennan yrityksesi tarvitsemat verkkoratkaisut.",
-    "footer.copy": "M4rKitS.dev. Kaikki oikeudet pidätetään."
+    "footer.copy": "M4rKitS.dev | Kaikki oikeudet pidätetään."
   }
 };
