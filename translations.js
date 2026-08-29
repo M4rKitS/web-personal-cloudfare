@@ -18,7 +18,6 @@ const TRANSLATIONS = {
     "nav.contact": "05//CONTACT",
 
     // Hero
-    "hero.badge": "STATUS: AVAILABLE FOR PROJECTS",
     "hero.line1": "WEB",
     "hero.line2": "DEVELOPER",
     "hero.role": "Marcos Rodríguez <br /> Full Stack Developer — modern and agile web development, powered by AI tools, for small businesses and entrepreneurs looking to stand out online.",
@@ -177,7 +176,6 @@ const TRANSLATIONS = {
     "nav.contact": "05//CONTACTO",
 
     // Hero
-    "hero.badge": "ESTADO: DISPONIBLE PARA PROYECTOS",
     "hero.line1": "WEB",
     "hero.line2": "DEVELOPER",
     "hero.role": "Marcos Rodríguez <br /> Full Stack Developer — desarrollo web moderno y ágil, potenciado por herramientas de IA, para pequeños negocios y emprendedores que quieren destacar online.",
@@ -331,7 +329,6 @@ const TRANSLATIONS = {
     "nav.contact": "05//OTA YHTEYTTÄ",
 
     // Hero
-    "hero.badge": "TILA: SAATAVILLA PROJEKTEIHIN",
     "hero.line1": "WEB",
     "hero.line2": "DEVELOPER",
     "hero.role": "Marcos Rodríguez <br /> Full Stack -kehittäjä — modernia ja ketterää verkkokehitystä, tekoälytyökalujen tehostamana, pienyrityksille ja yrittäjille, jotka haluavat erottua verkossa.",
