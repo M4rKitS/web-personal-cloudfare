@@ -271,37 +271,42 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // --- 3.5 FEATURED PROJECT GALLERY (floating preview panel) ---
-  const m4rkcalGallery = document.getElementById('m4rkcalGallery');
-  const m4rkcalPanel = document.getElementById('m4rkcalPreviewPanel');
-  const m4rkcalPreviewImg = document.getElementById('m4rkcalPreviewImg');
-  const m4rkcalBackdrop = document.getElementById('m4rkcalBackdrop');
+  // --- 3.5 DOCK-STYLE PROJECT CAROUSELS (reusable) ---
+  const dockCarousels = document.querySelectorAll('[data-dock-carousel]');
+  const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
-  if (m4rkcalGallery && m4rkcalPanel && m4rkcalPreviewImg && m4rkcalBackdrop) {
-    const galleryImgs = Array.from(m4rkcalGallery.querySelectorAll('img'));
+  dockCarousels.forEach(carousel => {
+    const imgs = Array.from(carousel.querySelectorAll('img'));
+    const maxScale = 1.35;
+    const radius = 180; // px de radio de influencia
 
-    function showM4rkcalPreview(img) {
-      m4rkcalPreviewImg.src = img.src;
-      m4rkcalPanel.classList.add('active');
-      m4rkcalBackdrop.classList.add('active');
-      document.getElementById('projects')?.classList.add('preview-open');
-      galleryImgs.forEach(i => i.classList.toggle('focused', i === img));
+    if (supportsHover) {
+      carousel.addEventListener('mousemove', (e) => {
+        const mouseX = e.clientX;
+        imgs.forEach(img => {
+          const rect = img.getBoundingClientRect();
+          const imgCenter = rect.left + rect.width / 2;
+          const dist = Math.abs(mouseX - imgCenter);
+          const falloff = Math.max(0, 1 - dist / radius);
+          // Curva suave tipo campana (easing cuadrático)
+          const eased = falloff * falloff * (3 - 2 * falloff);
+          const scale = 1 + eased * (maxScale - 1);
+          img.style.transform = `scale(${scale})`;
+          img.style.zIndex = scale > 1.05 ? '10' : '1';
+        });
+      });
+
+      carousel.addEventListener('mouseleave', () => {
+        imgs.forEach(img => {
+          img.style.transform = 'scale(1)';
+          img.style.zIndex = '1';
+        });
+      });
     }
-
-    function hideM4rkcalPreview() {
-      m4rkcalPanel.classList.remove('active');
-      m4rkcalBackdrop.classList.remove('active');
-      document.getElementById('projects')?.classList.remove('preview-open');
-      galleryImgs.forEach(i => i.classList.remove('focused'));
-    }
-
-    galleryImgs.forEach(img => {
-      img.addEventListener('mouseenter', () => showM4rkcalPreview(img));
-      img.addEventListener('touchstart', () => showM4rkcalPreview(img), { passive: true });
-    });
-    m4rkcalGallery.addEventListener('mouseleave', hideM4rkcalPreview);
-    m4rkcalBackdrop.addEventListener('click', hideM4rkcalPreview);
-  }
+    // En touch (sin hover: hover), no se añade ningún listener de 
+    // magnificación — el navegador ya gestiona el scroll horizontal 
+    // nativo por arrastre sin necesidad de JS adicional.
+  });
 
 
   // --- 4. TERMINAL CONTACT FORM ---

@@ -599,83 +599,56 @@ img, svg {
 .project-gallery-wrapper {
   position: relative;
 }
+.project-gallery-wrapper::before,
+.project-gallery-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  pointer-events: none;
+  z-index: 5;
+}
+.project-gallery-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #000, transparent);
+}
+.project-gallery-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #000, transparent);
+}
 
 .project-gallery {
   display: flex;
-  justify-content: center;
   gap: 14px;
   overflow-x: auto;
-  padding: 30px 20px;
+  overflow-y: visible;
+  padding: 40px 20px;
   background: #000;
-  border-radius: 17px 17px 0 0;
+  border-radius: 18px 18px 0 0;
   scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
+  position: relative;
 }
 
 .project-gallery::-webkit-scrollbar {
   display: none;
 }
 
+.project-gallery:active {
+  cursor: grabbing;
+}
+
 .project-gallery img {
-  height: 200px;
+  height: 220px;
   border-radius: 12px;
   flex-shrink: 0;
   border: 1px solid #1f1f1f;
-  cursor: zoom-in;
-  opacity: 0.6;
-  transition: opacity 0.25s ease, border-color 0.25s ease;
-}
-
-.project-gallery img.focused {
-  opacity: 1;
-  border-color: var(--accent-green);
-}
-
-.preview-panel {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.9);
-  width: 300px;
-  max-height: 640px;
-  border-radius: 20px;
-  overflow: hidden;
-  border: 2px solid var(--accent-green);
-  box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.7), 0 0 0 8px rgba(0, 0, 0, 0.4);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.22s ease, transform 0.22s ease;
-  z-index: 50;
-  background: #000;
-}
-
-.preview-panel.active {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.preview-panel img {
-  width: 100%;
-  display: block;
-}
-
-.gallery-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.22s ease;
-  z-index: 40;
-}
-
-.gallery-backdrop.active {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-#projects.preview-open,
-#projects:has(.preview-panel.active) {
-  z-index: 50;
+  transition: transform 0.15s cubic-bezier(.2,.8,.2,1);
+  transform-origin: center bottom;
+  will-change: transform;
+  position: relative;
 }
 
 .project-card-body {
@@ -1775,13 +1748,8 @@ img, svg {
     border-color: var(--bg-card);
   }
 
-  /* 8. Featured Project Gallery & Floating Preview mobile styling */
+  /* 8. Featured Project Dock Carousel Mobile Styling */
   .project-gallery img {
     height: 180px;
-  }
-
-  .preview-panel {
-    width: min(300px, 85vw);
-    max-height: 80vh;
   }
 }
