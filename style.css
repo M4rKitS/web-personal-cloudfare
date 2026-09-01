@@ -600,8 +600,8 @@ img, svg {
   position: relative;
   max-width: 620px;
   margin: 0 auto;
-  height: 440px;
-  padding-top: 56px;
+  height: 470px;
+  padding-top: 0;
 }
 
 .phone {
@@ -656,10 +656,10 @@ img, svg {
   object-position: top;
 }
 
-.p1 { top: 10px;  left: 6%;  transform: rotate(-6deg); z-index: 2; --hover-transform: rotate(-6deg) translateY(-10px) scale(1.04); }
-.p2 { top: 60px;  left: 30%; transform: rotate(3deg);  z-index: 4; width: 160px; --hover-transform: rotate(3deg) translateY(-10px) scale(1.04); }
-.p3 { top: 0px;   left: 54%; transform: rotate(-2deg); z-index: 3; width: 168px; --hover-transform: rotate(-2deg) translateY(-10px) scale(1.04); }
-.p4 { top: 90px;  left: 76%; transform: rotate(7deg);  z-index: 1; --hover-transform: rotate(7deg) translateY(-10px) scale(1.04); }
+.p1 { top: 46px;  left: 6%;  transform: rotate(-6deg); z-index: 2; --hover-transform: rotate(-6deg) translateY(-10px) scale(1.04); }
+.p2 { top: 96px;  left: 30%; transform: rotate(3deg);  z-index: 4; width: 160px; --hover-transform: rotate(3deg) translateY(-10px) scale(1.04); }
+.p3 { top: 36px;  left: 54%; transform: rotate(-2deg); z-index: 3; width: 168px; --hover-transform: rotate(-2deg) translateY(-10px) scale(1.04); }
+.p4 { top: 126px; left: 76%; transform: rotate(7deg);  z-index: 1; --hover-transform: rotate(7deg) translateY(-10px) scale(1.04); }
 
 .lightbox {
   position: fixed; inset: 0; background: rgba(0,0,0,0.85);
