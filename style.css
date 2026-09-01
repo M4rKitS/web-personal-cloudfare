@@ -598,6 +598,8 @@ img, svg {
 
 .project-gallery-wrapper {
   position: relative;
+  max-width: 620px;
+  margin: 0 auto;
 }
 .project-gallery-wrapper::before,
 .project-gallery-wrapper::after {
@@ -620,10 +622,11 @@ img, svg {
 
 .project-gallery {
   display: flex;
+  justify-content: center;
   gap: 14px;
   overflow-x: auto;
-  overflow-y: visible;
-  padding: 40px 20px;
+  overflow-y: hidden;
+  padding: 90px 20px 20px;
   background: #000;
   border-radius: 18px 18px 0 0;
   scrollbar-width: none;
@@ -631,24 +634,21 @@ img, svg {
   cursor: grab;
   position: relative;
 }
-
-.project-gallery::-webkit-scrollbar {
-  display: none;
+.project-gallery.is-overflowing {
+  justify-content: flex-start;
 }
-
-.project-gallery:active {
-  cursor: grabbing;
-}
+.project-gallery::-webkit-scrollbar { display: none; }
+.project-gallery:active { cursor: grabbing; }
 
 .project-gallery img {
   height: 220px;
   border-radius: 12px;
   flex-shrink: 0;
   border: 1px solid #1f1f1f;
-  transition: transform 0.15s cubic-bezier(.2,.8,.2,1);
+  transform: scale(var(--dock-scale, 1));
   transform-origin: center bottom;
+  transition: transform 0.15s cubic-bezier(.2,.8,.2,1);
   will-change: transform;
-  position: relative;
 }
 
 .project-card-body {
@@ -1749,6 +1749,9 @@ img, svg {
   }
 
   /* 8. Featured Project Dock Carousel Mobile Styling */
+  .project-gallery {
+    padding-top: 70px;
+  }
   .project-gallery img {
     height: 180px;
   }

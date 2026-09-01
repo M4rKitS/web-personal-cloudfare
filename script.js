@@ -274,38 +274,43 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- 3.5 DOCK-STYLE PROJECT CAROUSELS (reusable) ---
   const dockCarousels = document.querySelectorAll('[data-dock-carousel]');
   const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const RANGE = 160;
+  const MAX_SCALE = 1.35;
+
+  function updateCarouselAlignment(carousel) {
+    const isOverflowing = carousel.scrollWidth > carousel.clientWidth + 1;
+    carousel.classList.toggle('is-overflowing', isOverflowing);
+  }
 
   dockCarousels.forEach(carousel => {
     const imgs = Array.from(carousel.querySelectorAll('img'));
-    const maxScale = 1.35;
-    const radius = 180; // px de radio de influencia
+
+    updateCarouselAlignment(carousel);
+    window.addEventListener('resize', () => updateCarouselAlignment(carousel), { passive: true });
+
+    function resetScales() {
+      imgs.forEach(img => {
+        img.style.removeProperty('--dock-scale');
+        img.style.zIndex = '1';
+      });
+    }
 
     if (supportsHover) {
       carousel.addEventListener('mousemove', (e) => {
         const mouseX = e.clientX;
         imgs.forEach(img => {
           const rect = img.getBoundingClientRect();
-          const imgCenter = rect.left + rect.width / 2;
-          const dist = Math.abs(mouseX - imgCenter);
-          const falloff = Math.max(0, 1 - dist / radius);
-          // Curva suave tipo campana (easing cuadrático)
+          const center = rect.left + rect.width / 2;
+          const dist = Math.abs(mouseX - center);
+          const falloff = Math.max(0, 1 - dist / RANGE);
           const eased = falloff * falloff * (3 - 2 * falloff);
-          const scale = 1 + eased * (maxScale - 1);
-          img.style.transform = `scale(${scale})`;
+          const scale = 1 + eased * (MAX_SCALE - 1);
+          img.style.setProperty('--dock-scale', String(scale));
           img.style.zIndex = scale > 1.05 ? '10' : '1';
         });
       });
-
-      carousel.addEventListener('mouseleave', () => {
-        imgs.forEach(img => {
-          img.style.transform = 'scale(1)';
-          img.style.zIndex = '1';
-        });
-      });
+      carousel.addEventListener('mouseleave', resetScales);
     }
-    // En touch (sin hover: hover), no se añade ningún listener de 
-    // magnificación — el navegador ya gestiona el scroll horizontal 
-    // nativo por arrastre sin necesidad de JS adicional.
   });
 
 
