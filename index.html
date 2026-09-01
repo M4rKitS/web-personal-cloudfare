@@ -159,11 +159,16 @@
           </div>
 
           <article class="project-card">
-            <div class="project-gallery" id="m4rkcalGallery">
-              <img class="focused" src="/assets/projects/m4rkcal-01-dashboard.jpg" alt="M4rKcal — Dashboard">
-              <img src="/assets/projects/m4rkcal-02-watch.jpg" alt="M4rKcal — Apple Watch y Hevy">
-              <img src="/assets/projects/m4rkcal-03-historial.jpg" alt="M4rKcal — Historial">
-              <img src="/assets/projects/m4rkcal-04-registro.jpg" alt="M4rKcal — Registro de comida">
+            <div class="project-gallery-wrapper">
+              <div class="project-gallery" id="m4rkcalGallery">
+                <img src="/assets/projects/m4rkcal-01-dashboard.jpg" alt="M4rKcal — Dashboard">
+                <img src="/assets/projects/m4rkcal-02-watch.jpg" alt="M4rKcal — Apple Watch y Hevy">
+                <img src="/assets/projects/m4rkcal-03-historial.jpg" alt="M4rKcal — Historial">
+                <img src="/assets/projects/m4rkcal-04-registro.jpg" alt="M4rKcal — Registro de comida">
+              </div>
+              <div class="preview-panel" id="m4rkcalPreviewPanel">
+                <img id="m4rkcalPreviewImg" src="" alt="Vista ampliada de M4rKcal">
+              </div>
             </div>
             <div class="project-card-body">
               <div class="project-top">
@@ -685,6 +690,9 @@
       </div>
     </div>
   </footer>
+
+  <!-- Gallery Backdrop for M4rKcal Floating Preview -->
+  <div class="gallery-backdrop" id="m4rkcalBackdrop"></div>
 
   <!-- Scripts -->
   <script src="translations.js"></script>

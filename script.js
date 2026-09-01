@@ -271,33 +271,36 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // --- 3.5 FEATURED PROJECT GALLERY (cursor focus effect) ---
+  // --- 3.5 FEATURED PROJECT GALLERY (floating preview panel) ---
   const m4rkcalGallery = document.getElementById('m4rkcalGallery');
-  if (m4rkcalGallery) {
+  const m4rkcalPanel = document.getElementById('m4rkcalPreviewPanel');
+  const m4rkcalPreviewImg = document.getElementById('m4rkcalPreviewImg');
+  const m4rkcalBackdrop = document.getElementById('m4rkcalBackdrop');
+
+  if (m4rkcalGallery && m4rkcalPanel && m4rkcalPreviewImg && m4rkcalBackdrop) {
     const galleryImgs = Array.from(m4rkcalGallery.querySelectorAll('img'));
 
-    function updateGalleryFocus(clientX) {
-      let closest = null;
-      let closestDist = Infinity;
-      galleryImgs.forEach(img => {
-        const rect = img.getBoundingClientRect();
-        const center = rect.left + rect.width / 2;
-        const dist = Math.abs(clientX - center);
-        if (dist < closestDist) {
-          closestDist = dist;
-          closest = img;
-        }
-      });
-      galleryImgs.forEach(img => img.classList.toggle('focused', img === closest));
+    function showM4rkcalPreview(img) {
+      m4rkcalPreviewImg.src = img.src;
+      m4rkcalPanel.classList.add('active');
+      m4rkcalBackdrop.classList.add('active');
+      document.getElementById('projects')?.classList.add('preview-open');
+      galleryImgs.forEach(i => i.classList.toggle('focused', i === img));
     }
 
-    m4rkcalGallery.addEventListener('mousemove', (e) => updateGalleryFocus(e.clientX));
-    m4rkcalGallery.addEventListener('mouseleave', () => {
-      galleryImgs.forEach((img, i) => img.classList.toggle('focused', i === 0));
+    function hideM4rkcalPreview() {
+      m4rkcalPanel.classList.remove('active');
+      m4rkcalBackdrop.classList.remove('active');
+      document.getElementById('projects')?.classList.remove('preview-open');
+      galleryImgs.forEach(i => i.classList.remove('focused'));
+    }
+
+    galleryImgs.forEach(img => {
+      img.addEventListener('mouseenter', () => showM4rkcalPreview(img));
+      img.addEventListener('touchstart', () => showM4rkcalPreview(img), { passive: true });
     });
-    m4rkcalGallery.addEventListener('touchmove', (e) => {
-      updateGalleryFocus(e.touches[0].clientX);
-    }, { passive: true });
+    m4rkcalGallery.addEventListener('mouseleave', hideM4rkcalPreview);
+    m4rkcalBackdrop.addEventListener('click', hideM4rkcalPreview);
   }
 
 
