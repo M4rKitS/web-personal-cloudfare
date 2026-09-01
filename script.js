@@ -271,6 +271,36 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
+  // --- 3.5 FEATURED PROJECT GALLERY (cursor focus effect) ---
+  const m4rkcalGallery = document.getElementById('m4rkcalGallery');
+  if (m4rkcalGallery) {
+    const galleryImgs = Array.from(m4rkcalGallery.querySelectorAll('img'));
+
+    function updateGalleryFocus(clientX) {
+      let closest = null;
+      let closestDist = Infinity;
+      galleryImgs.forEach(img => {
+        const rect = img.getBoundingClientRect();
+        const center = rect.left + rect.width / 2;
+        const dist = Math.abs(clientX - center);
+        if (dist < closestDist) {
+          closestDist = dist;
+          closest = img;
+        }
+      });
+      galleryImgs.forEach(img => img.classList.toggle('focused', img === closest));
+    }
+
+    m4rkcalGallery.addEventListener('mousemove', (e) => updateGalleryFocus(e.clientX));
+    m4rkcalGallery.addEventListener('mouseleave', () => {
+      galleryImgs.forEach((img, i) => img.classList.toggle('focused', i === 0));
+    });
+    m4rkcalGallery.addEventListener('touchmove', (e) => {
+      updateGalleryFocus(e.touches[0].clientX);
+    }, { passive: true });
+  }
+
+
   // --- 4. TERMINAL CONTACT FORM ---
   if (typeof emailjs !== 'undefined') {
     emailjs.init("d4w05JCeQd75BiH0Q");
