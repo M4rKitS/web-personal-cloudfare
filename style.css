@@ -1786,8 +1786,12 @@ img, svg {
   }
 
   /* 8. Featured Project Phone Collage Mobile Styling */
-  .collage { height: 340px; }
+  .collage { height: 350px; }
   .phone { width: 110px; }
   .p2, .p3 { width: 118px; }
+  .p1 { top: 33px; }
+  .p2 { top: 69px; }
+  .p3 { top: 26px; }
+  .p4 { top: 91px; }
   .lightbox-phone { width: 240px; }
 }
