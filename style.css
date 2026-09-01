@@ -589,67 +589,61 @@ img, svg {
 }
 
 .project-card {
-  background: #0d0d0d;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, #1a1410 0%, #050505 65%);
   border: 1px solid #1f1f1f;
   border-radius: 18px;
   overflow: visible;
   position: relative;
 }
 
-.project-gallery-wrapper {
+.collage {
   position: relative;
-  max-width: 620px;
-  margin: 0 auto;
+  height: 460px;
+  padding: 40px 0 0;
 }
-.project-gallery-wrapper::before,
-.project-gallery-wrapper::after {
-  content: '';
+
+.phone {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 40px;
-  pointer-events: none;
-  z-index: 5;
+  width: 148px;
+  aspect-ratio: 9 / 19.5;
+  background: #0a0a0a;
+  border-radius: 28px;
+  padding: 6px;
+  box-shadow: 0 30px 60px -15px rgba(0,0,0,0.7), inset 0 0 0 1px #2a2a2a;
+  cursor: zoom-in;
+  transition: transform 0.3s cubic-bezier(.2,.8,.2,1), box-shadow 0.3s ease;
 }
-.project-gallery-wrapper::before {
-  left: 0;
-  background: linear-gradient(to right, #000, transparent);
-}
-.project-gallery-wrapper::after {
-  right: 0;
-  background: linear-gradient(to left, #000, transparent);
+.phone:hover {
+  transform: var(--hover-transform);
+  box-shadow: 0 40px 80px -15px var(--accent-green-glow), inset 0 0 0 1px var(--accent-green);
+  z-index: 20 !important;
 }
 
-.project-gallery {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 90px 20px 20px;
-  background: #000;
-  border-radius: 18px 18px 0 0;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  cursor: grab;
-  position: relative;
-}
-.project-gallery.is-overflowing {
-  justify-content: flex-start;
-}
-.project-gallery::-webkit-scrollbar { display: none; }
-.project-gallery:active { cursor: grabbing; }
+.phone-screen { width: 100%; height: 100%; border-radius: 22px; overflow: hidden; position: relative; background: #000; }
+.phone-screen img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.notch { position: absolute; top: 6px; left: 50%; transform: translateX(-50%); width: 34%; height: 16px; background: #0a0a0a; border-radius: 10px; z-index: 3; }
 
-.project-gallery img {
-  height: 220px;
-  border-radius: 12px;
-  flex-shrink: 0;
-  border: 1px solid #1f1f1f;
-  transform: scale(var(--dock-scale, 1));
-  transform-origin: center bottom;
-  transition: transform 0.15s cubic-bezier(.2,.8,.2,1);
-  will-change: transform;
+.p1 { top: 10px;  left: 6%;  transform: rotate(-6deg); z-index: 2; --hover-transform: rotate(-6deg) translateY(-10px) scale(1.04); }
+.p2 { top: 60px;  left: 30%; transform: rotate(3deg);  z-index: 4; width: 160px; --hover-transform: rotate(3deg) translateY(-10px) scale(1.04); }
+.p3 { top: 0px;   left: 54%; transform: rotate(-2deg); z-index: 3; width: 168px; --hover-transform: rotate(-2deg) translateY(-10px) scale(1.04); }
+.p4 { top: 90px;  left: 76%; transform: rotate(7deg);  z-index: 1; --hover-transform: rotate(7deg) translateY(-10px) scale(1.04); }
+
+.lightbox {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.85);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity 0.25s ease; z-index: 100; padding: 40px 20px;
 }
+.lightbox.active { opacity: 1; pointer-events: auto; }
+.lightbox-phone {
+  width: 300px; aspect-ratio: 9 / 19.5; background: #0a0a0a; border-radius: 46px; padding: 10px;
+  box-shadow: 0 50px 100px -20px rgba(0,0,0,0.8), inset 0 0 0 2px #2a2a2a;
+  transform: scale(0.9); transition: transform 0.25s cubic-bezier(.2,.8,.2,1);
+}
+.lightbox.active .lightbox-phone { transform: scale(1); }
+.lightbox-screen { width: 100%; height: 100%; border-radius: 38px; overflow: hidden; position: relative; background: #000; }
+.lightbox-screen img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.lightbox-screen .notch { top: 12px; width: 34%; height: 26px; }
+.close-hint { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); font-size: 11px; color: #888; }
 
 .project-card-body {
   padding: 24px;
@@ -1748,11 +1742,9 @@ img, svg {
     border-color: var(--bg-card);
   }
 
-  /* 8. Featured Project Dock Carousel Mobile Styling */
-  .project-gallery {
-    padding-top: 70px;
-  }
-  .project-gallery img {
-    height: 180px;
-  }
+  /* 8. Featured Project Phone Collage Mobile Styling */
+  .collage { height: 340px; }
+  .phone { width: 110px; }
+  .p2, .p3 { width: 118px; }
+  .lightbox-phone { width: 240px; }
 }

@@ -159,12 +159,18 @@
           </div>
 
           <article class="project-card">
-            <div class="project-gallery-wrapper">
-              <div class="project-gallery" id="m4rkcalGallery" data-dock-carousel>
-                <img src="/assets/projects/m4rkcal-01-dashboard.jpg" alt="M4rKcal — Dashboard">
-                <img src="/assets/projects/m4rkcal-02-watch.jpg" alt="M4rKcal — Apple Watch y Hevy">
-                <img src="/assets/projects/m4rkcal-03-historial.jpg" alt="M4rKcal — Historial">
-                <img src="/assets/projects/m4rkcal-04-registro.jpg" alt="M4rKcal — Registro de comida">
+            <div class="collage" id="m4rkcalCollage">
+              <div class="phone p1" data-full="watch">
+                <div class="phone-screen"><div class="notch"></div><img src="/assets/projects/m4rkcal-02-watch.jpg" alt="M4rKcal — Apple Watch y Hevy"></div>
+              </div>
+              <div class="phone p2" data-full="dash">
+                <div class="phone-screen"><div class="notch"></div><img src="/assets/projects/m4rkcal-01-dashboard.jpg" alt="M4rKcal — Dashboard"></div>
+              </div>
+              <div class="phone p3" data-full="hist">
+                <div class="phone-screen"><div class="notch"></div><img src="/assets/projects/m4rkcal-03-historial.jpg" alt="M4rKcal — Historial"></div>
+              </div>
+              <div class="phone p4" data-full="food">
+                <div class="phone-screen"><div class="notch"></div><img src="/assets/projects/m4rkcal-04-registro.jpg" alt="M4rKcal — Registro de comida"></div>
               </div>
             </div>
             <div class="project-card-body">
@@ -687,6 +693,13 @@
       </div>
     </div>
   </footer>
+
+  <div class="lightbox" id="m4rkcalLightbox">
+    <div class="lightbox-phone">
+      <div class="lightbox-screen"><div class="notch"></div><img id="m4rkcalLightboxImg" src="" alt="Vista ampliada"></div>
+    </div>
+    <span class="close-hint">Haz clic en cualquier sitio para cerrar</span>
+  </div>
 
   <!-- Scripts -->
   <script src="translations.js"></script>

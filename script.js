@@ -271,47 +271,24 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // --- 3.5 DOCK-STYLE PROJECT CAROUSELS (reusable) ---
-  const dockCarousels = document.querySelectorAll('[data-dock-carousel]');
-  const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-  const RANGE = 160;
-  const MAX_SCALE = 1.35;
+  // --- 3.5 PROJECT PHONE COLLAGE WITH LIGHTBOX ---
+  const m4rkcalCollage = document.getElementById('m4rkcalCollage');
+  const m4rkcalLightbox = document.getElementById('m4rkcalLightbox');
+  const m4rkcalLightboxImg = document.getElementById('m4rkcalLightboxImg');
 
-  function updateCarouselAlignment(carousel) {
-    const isOverflowing = carousel.scrollWidth > carousel.clientWidth + 1;
-    carousel.classList.toggle('is-overflowing', isOverflowing);
+  if (m4rkcalCollage && m4rkcalLightbox && m4rkcalLightboxImg) {
+    m4rkcalCollage.querySelectorAll('.phone').forEach(phone => {
+      phone.addEventListener('click', () => {
+        const img = phone.querySelector('img');
+        m4rkcalLightboxImg.src = img.src;
+        m4rkcalLightboxImg.alt = img.alt;
+        m4rkcalLightbox.classList.add('active');
+      });
+    });
+    m4rkcalLightbox.addEventListener('click', () => {
+      m4rkcalLightbox.classList.remove('active');
+    });
   }
-
-  dockCarousels.forEach(carousel => {
-    const imgs = Array.from(carousel.querySelectorAll('img'));
-
-    updateCarouselAlignment(carousel);
-    window.addEventListener('resize', () => updateCarouselAlignment(carousel), { passive: true });
-
-    function resetScales() {
-      imgs.forEach(img => {
-        img.style.removeProperty('--dock-scale');
-        img.style.zIndex = '1';
-      });
-    }
-
-    if (supportsHover) {
-      carousel.addEventListener('mousemove', (e) => {
-        const mouseX = e.clientX;
-        imgs.forEach(img => {
-          const rect = img.getBoundingClientRect();
-          const center = rect.left + rect.width / 2;
-          const dist = Math.abs(mouseX - center);
-          const falloff = Math.max(0, 1 - dist / RANGE);
-          const eased = falloff * falloff * (3 - 2 * falloff);
-          const scale = 1 + eased * (MAX_SCALE - 1);
-          img.style.setProperty('--dock-scale', String(scale));
-          img.style.zIndex = scale > 1.05 ? '10' : '1';
-        });
-      });
-      carousel.addEventListener('mouseleave', resetScales);
-    }
-  });
 
 
   // --- 4. TERMINAL CONTACT FORM ---
