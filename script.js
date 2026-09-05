@@ -136,11 +136,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Topographic Grid Parameters
-    const rows = 50;
-    const cols = 75;
+    const rows = 34;
+    const cols = 50;
     let time = 0;
+    let lastFrameTime = 0;
+    const frameInterval = 1000 / 30; // limita a ~30fps
 
-    function renderParticleWave() {
+    function renderParticleWave(currentTime = performance.now()) {
+      animationFrameId = requestAnimationFrame(renderParticleWave);
+
+      if (currentTime - lastFrameTime < frameInterval) return;
+      lastFrameTime = currentTime;
+
       time += 0.011;
 
       // Smooth scroll interpolation
@@ -183,12 +190,14 @@ document.addEventListener('DOMContentLoaded', () => {
           let elevation = wave1 + wave2 + wave3;
 
           // Interactive Mouse reaction
-          const dx = baseX - mouse.x;
-          const dy = baseY - mouse.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 260) {
-            const force = (1 - dist / 260) * 55;
-            elevation -= force;
+          if (isHovering) {
+            const dx = baseX - mouse.x;
+            const dy = baseY - mouse.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 260) {
+              const force = (1 - dist / 260) * 55;
+              elevation -= force;
+            }
           }
 
           const posX = baseX;
@@ -223,8 +232,6 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
       }
-
-      animationFrameId = requestAnimationFrame(renderParticleWave);
     }
 
     renderParticleWave();
