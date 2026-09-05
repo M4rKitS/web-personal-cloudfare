@@ -610,7 +610,6 @@ img, svg {
 
 .phone-frame {
   width: 230px;
-  aspect-ratio: 9 / 19.5;
   background: #0a0a0a;
   border-radius: 36px;
   padding: 8px;
@@ -626,7 +625,6 @@ img, svg {
 
 .phone-screen {
   width: 100%;
-  height: 100%;
   border-radius: 28px;
   overflow: hidden;
   display: flex;
@@ -649,16 +647,16 @@ img, svg {
   box-shadow: inset 0 0 0 0.5px rgba(255, 255, 255, 0.08);
 }
 .screen-image {
-  flex: 1;
+  width: 100%;
+  aspect-ratio: 1290 / 2656;
   overflow: hidden;
   position: relative;
 }
 .screen-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: top;
-  background: #000;
   display: block;
 }
 
@@ -671,7 +669,7 @@ img, svg {
 }
 .lightbox.active { opacity: 1; pointer-events: auto; }
 .lightbox-phone {
-  width: 300px; aspect-ratio: 9 / 19.5; background: #0a0a0a; border-radius: 46px; padding: 10px;
+  width: 300px; background: #0a0a0a; border-radius: 46px; padding: 10px;
   box-shadow: 0 50px 100px -20px rgba(0,0,0,0.8), inset 0 0 0 2px #2a2a2a;
   transform: scale(0.9); transition: transform 0.25s cubic-bezier(.2,.8,.2,1);
 }
@@ -681,14 +679,13 @@ img, svg {
   flex-direction: column;
   background: #000;
   width: 100%;
-  height: 100%;
   border-radius: 36px;
   overflow: hidden;
 }
 .lightbox-screen .status-bar { height: 28px; background: #000; }
 .lightbox-screen .notch { width: 80px; height: 12px; border-radius: 9999px; background: #111113; box-shadow: inset 0 0 0 0.5px rgba(255, 255, 255, 0.08); }
-.lightbox-screen .screen-image { flex: 1; overflow: hidden; position: relative; }
-.lightbox-screen .screen-image img { width: 100%; height: 100%; object-fit: contain; object-position: top; background: #000; display: block; }
+.lightbox-screen .screen-image { overflow: hidden; position: relative; }
+.lightbox-screen .screen-image img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
 .close-hint { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); font-size: 11px; color: #888; }
 
 .project-card-body {
