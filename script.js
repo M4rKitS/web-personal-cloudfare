@@ -271,22 +271,29 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // --- 3.5 PROJECT PHONE COLLAGE WITH LIGHTBOX ---
-  const m4rkcalCollage = document.getElementById('m4rkcalCollage');
+  // --- 3.5 PROJECT PHONE STAGE WITH LIGHTBOX ---
+  const m4rkcalStage = document.getElementById('m4rkcalStage');
   const m4rkcalLightbox = document.getElementById('m4rkcalLightbox');
   const m4rkcalLightboxImg = document.getElementById('m4rkcalLightboxImg');
 
-  if (m4rkcalCollage && m4rkcalLightbox && m4rkcalLightboxImg) {
-    m4rkcalCollage.querySelectorAll('.phone').forEach(phone => {
+  if (m4rkcalStage && m4rkcalLightbox && m4rkcalLightboxImg) {
+    m4rkcalStage.querySelectorAll('.phone-frame').forEach(phone => {
       phone.addEventListener('click', () => {
         const img = phone.querySelector('img');
-        m4rkcalLightboxImg.src = img.src;
-        m4rkcalLightboxImg.alt = img.alt;
-        m4rkcalLightbox.classList.add('active');
+        if (img) {
+          m4rkcalLightboxImg.src = img.src;
+          m4rkcalLightboxImg.alt = img.alt;
+          m4rkcalLightbox.classList.add('active');
+        }
       });
     });
     m4rkcalLightbox.addEventListener('click', () => {
       m4rkcalLightbox.classList.remove('active');
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && m4rkcalLightbox.classList.contains('active')) {
+        m4rkcalLightbox.classList.remove('active');
+      }
     });
   }
 
