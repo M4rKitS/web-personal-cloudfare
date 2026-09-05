@@ -663,16 +663,21 @@ img, svg {
 
 .lightbox {
   position: fixed; inset: 0; background: rgba(0,0,0,0.85);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   display: flex; align-items: center; justify-content: center;
-  opacity: 0; pointer-events: none; transition: opacity 0.25s ease; z-index: 100; padding: 40px 20px;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.18s ease;
+  will-change: opacity;
+  z-index: 100; padding: 40px 20px;
 }
 .lightbox.active { opacity: 1; pointer-events: auto; }
 .lightbox-phone {
   width: 300px; background: #0a0a0a; border-radius: 46px; padding: 10px;
   box-shadow: 0 50px 100px -20px rgba(0,0,0,0.8), inset 0 0 0 2px #2a2a2a;
-  transform: scale(0.9); transition: transform 0.25s cubic-bezier(.2,.8,.2,1);
+  transform: scale(0.9);
+  transition: transform 0.18s cubic-bezier(.2,.8,.2,1);
+  will-change: transform;
 }
 .lightbox.active .lightbox-phone { transform: scale(1); }
 .lightbox-screen {

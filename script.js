@@ -280,10 +280,20 @@ document.addEventListener('DOMContentLoaded', () => {
     m4rkcalStage.querySelectorAll('.phone-frame').forEach(phone => {
       phone.addEventListener('click', () => {
         const img = phone.querySelector('img');
-        if (img) {
-          m4rkcalLightboxImg.src = img.src;
-          m4rkcalLightboxImg.alt = img.alt;
-          m4rkcalLightbox.classList.add('active');
+        if (!img) return;
+        m4rkcalLightboxImg.src = img.src;
+        m4rkcalLightboxImg.alt = img.alt;
+
+        const openLightbox = () => {
+          requestAnimationFrame(() => {
+            m4rkcalLightbox.classList.add('active');
+          });
+        };
+
+        if (m4rkcalLightboxImg.decode) {
+          m4rkcalLightboxImg.decode().then(openLightbox).catch(openLightbox);
+        } else {
+          openLightbox();
         }
       });
     });
