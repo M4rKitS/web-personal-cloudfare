@@ -601,11 +601,12 @@ img, svg {
   align-items: center;
   justify-content: center;
   gap: 18px;
-  padding: 56px 24px;
+  padding: 44px 24px;
+  margin: 28px -24px 32px;
   flex-wrap: wrap;
   background: radial-gradient(ellipse 80% 60% at 50% 0%, #1a1410 0%, #050505 65%);
-  border-top-left-radius: 17px;
-  border-top-right-radius: 17px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .phone-frame {
@@ -1782,7 +1783,8 @@ img, svg {
   /* 8. Featured Project Phone Stage Mobile Styling */
   .phone-stage {
     gap: 10px;
-    padding: 36px 12px;
+    padding: 32px 12px;
+    margin: 24px -24px 28px;
   }
   .phone-frame {
     width: 155px;
