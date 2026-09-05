@@ -1,0 +1,23 @@
+# M4rKitS.dev
+
+> Marcos Rodríguez (M4rKitS) is a Full Stack Developer based in Vantaa, Finland, building modern, AI-powered websites and applications for small businesses and entrepreneurs. Trained at Conquer Blocks Academy, with a background of 8+ years in IT systems and operations before transitioning to software development.
+
+Personal portfolio site (single page, sections navigated via anchors). Available for freelance web development work. Primary tech stack: Cloudflare Pages/Workers/D1/R2, Swift/SwiftUI for iOS, JavaScript/HTML/CSS for web.
+
+## Sections
+
+- [Home](https://m4rkits.dev/#hero): Introduction and current availability status
+- [Projects](https://m4rkits.dev/#projects): Tech stack and built projects, including M4rKcal (a native iOS calorie/protein tracking app)
+- [Experience](https://m4rkits.dev/#experience): Professional trajectory and education
+- [About](https://m4rkits.dev/#about): Background, certifications, and languages
+- [Contact](https://m4rkits.dev/#contact): Contact form and direct email
+
+## Links
+
+- [GitHub](https://github.com/M4rKitS): Public code repositories, including M4rKcal
+- [LinkedIn](https://www.linkedin.com/in/mrodriguezhdz): Professional profile
+- Email: contact@m4rkits.dev
+
+## Optional
+
+- M4rKcal repository: https://github.com/M4rKitS/M4rKcal — Native iOS app for calorie and protein tracking, built with SwiftUI, SwiftData, HealthKit, and VisionKit
