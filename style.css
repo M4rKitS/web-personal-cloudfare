@@ -574,7 +574,7 @@ img, svg {
 
 .project-eyebrow {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 0.8125rem;
   letter-spacing: 1px;
   color: var(--accent-green);
   display: block;
@@ -583,9 +583,9 @@ img, svg {
 }
 
 .project-sublead {
-  font-size: 13px;
+  font-size: 1.0625rem;
   color: var(--text-secondary, #8a8a8a);
-  max-width: 520px;
+  max-width: 640px;
 }
 
 .project-card {
@@ -706,12 +706,6 @@ img, svg {
   color: #fff;
 }
 
-.project-tagline {
-  font-size: 13px;
-  color: var(--accent-green);
-  margin-top: 3px;
-}
-
 .project-badge {
   font-family: var(--font-mono);
   font-size: 11px;
@@ -723,7 +717,7 @@ img, svg {
 }
 
 .project-desc {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: #c5c5c5;
   line-height: 1.65;
   margin-bottom: 18px;
