@@ -600,8 +600,8 @@ img, svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 26px;
-  padding: 56px 40px;
+  gap: 18px;
+  padding: 56px 24px;
   flex-wrap: wrap;
   background: radial-gradient(ellipse 80% 60% at 50% 0%, #1a1410 0%, #050505 65%);
   border-top-left-radius: 17px;
@@ -609,10 +609,10 @@ img, svg {
 }
 
 .phone-frame {
-  width: 190px;
+  width: 230px;
   aspect-ratio: 9 / 19.5;
   background: #0a0a0a;
-  border-radius: 34px;
+  border-radius: 36px;
   padding: 8px;
   box-shadow: 0 30px 60px -12px rgba(0,0,0,0.65), inset 0 0 0 1px #2a2a2a;
   transition: transform 0.3s cubic-bezier(.2,.8,.2,1), box-shadow 0.3s ease;
@@ -627,14 +627,14 @@ img, svg {
 .phone-screen {
   width: 100%;
   height: 100%;
-  border-radius: 26px;
+  border-radius: 28px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   background: #000;
 }
 .status-bar {
-  height: 20px;
+  height: 22px;
   background: #000;
   flex-shrink: 0;
   display: flex;
@@ -642,8 +642,8 @@ img, svg {
   justify-content: center;
 }
 .notch {
-  width: 52px;
-  height: 8px;
+  width: 58px;
+  height: 9px;
   background: #111113;
   border-radius: 9999px;
   box-shadow: inset 0 0 0 0.5px rgba(255, 255, 255, 0.08);
@@ -656,8 +656,9 @@ img, svg {
 .screen-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: top;
+  background: #000;
   display: block;
 }
 
@@ -687,7 +688,7 @@ img, svg {
 .lightbox-screen .status-bar { height: 28px; background: #000; }
 .lightbox-screen .notch { width: 80px; height: 12px; border-radius: 9999px; background: #111113; box-shadow: inset 0 0 0 0.5px rgba(255, 255, 255, 0.08); }
 .lightbox-screen .screen-image { flex: 1; overflow: hidden; position: relative; }
-.lightbox-screen .screen-image img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+.lightbox-screen .screen-image img { width: 100%; height: 100%; object-fit: contain; object-position: top; background: #000; display: block; }
 .close-hint { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); font-size: 11px; color: #888; }
 
 .project-card-body {
@@ -1789,23 +1790,23 @@ img, svg {
 
   /* 8. Featured Project Phone Stage Mobile Styling */
   .phone-stage {
-    gap: 14px;
-    padding: 40px 16px;
+    gap: 10px;
+    padding: 36px 12px;
   }
   .phone-frame {
-    width: 130px;
-    border-radius: 26px;
+    width: 155px;
+    border-radius: 28px;
     padding: 6px;
   }
   .phone-frame .phone-screen {
-    border-radius: 20px;
+    border-radius: 22px;
   }
   .phone-frame .status-bar {
-    height: 16px;
+    height: 17px;
   }
   .phone-frame .notch {
-    width: 38px;
-    height: 6px;
+    width: 42px;
+    height: 7px;
   }
   .lightbox-phone {
     width: 260px;
